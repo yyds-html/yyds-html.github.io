@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>隐私保护政策 - 印占星盘 & 落盘 | Privacy Policy</title>
+  <meta name="description" content="印占星盘（Vedic）与落盘（LuoPan）应用的隐私保护政策，阐明数据处理原则、权限使用规范与用户隐私权利。">
+  <style>
+    :root {
+      --bg: #F9F7F2;
+      --card-bg: #FFFFFF;
+      --text-main: #2A2C2B;
+      --text-sub: #5C625E;
+      --text-hint: #8D948F;
+      --accent: #556B48;
+      --accent-soft: rgba(85, 107, 72, 0.08);
+      --gold: #B88E3E;
+      --border: rgba(0, 0, 0, 0.08);
+      --header-border: rgba(0, 0, 0, 0.06);
+      --code-bg: #EFECE6;
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141615;
+        --card-bg: #1E201F;
+        --text-main: #E5E7E6;
+        --text-sub: #A2A8A4;
+        --text-hint: #6E7571;
+        --accent: #8FA87F;
+        --accent-soft: rgba(143, 168, 127, 0.12);
+        --gold: #D4A857;
+        --border: rgba(255, 255, 255, 0.08);
+        --header-border: rgba(255, 255, 255, 0.06);
+        --code-bg: #272A28;
+        --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.7;
+      padding: 0;
+      margin: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: var(--bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--header-border);
+      padding: 16px 24px;
+    }
+
+    .header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-main);
+      text-decoration: none;
+      letter-spacing: 0.5px;
+    }
+
+    .logo-badge {
+      display: inline-block;
+      width: 26px;
+      height: 26px;
+      background: linear-gradient(135deg, var(--gold), var(--accent));
+      border-radius: 6px;
+      position: relative;
+    }
+
+    .lang-btn {
+      background-color: var(--accent-soft);
+      border: 1px solid var(--border);
+      color: var(--accent);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .lang-btn:hover {
+      background-color: var(--accent);
+      color: #FFF;
+    }
+
+    main {
+      max-width: 860px;
+      margin: 32px auto 64px;
+      padding: 0 24px;
+    }
+
+    .article-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: var(--shadow);
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 24px;
+      font-size: 0.85rem;
+      color: var(--text-hint);
+    }
+
+    .meta-tag {
+      background-color: var(--accent-soft);
+      color: var(--accent);
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 8px;
+      color: var(--text-main);
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      font-size: 1.05rem;
+      color: var(--text-sub);
+      margin-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      margin: 36px 0 14px;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h2::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      background-color: var(--gold);
+      border-radius: 2px;
+    }
+
+    p {
+      margin-bottom: 14px;
+      color: var(--text-sub);
+    }
+
+    ul, ol {
+      margin: 12px 0 18px 24px;
+      color: var(--text-sub);
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    strong {
+      color: var(--text-main);
+    }
+
+    .highlight-box {
+      background: var(--accent-soft);
+      border-left: 4px solid var(--accent);
+      padding: 16px 20px;
+      border-radius: 0 12px 12px 0;
+      margin: 20px 0;
+    }
+
+    .highlight-box p {
+      margin: 0;
+      color: var(--text-main);
+      font-weight: 500;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 0.9rem;
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 12px 14px;
+      text-align: left;
+    }
+
+    th {
+      background-color: var(--accent-soft);
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    td {
+      color: var(--text-sub);
+    }
+
+    code {
+      background-color: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.88em;
+      font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    footer {
+      border-top: 1px solid var(--header-border);
+      padding: 32px 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-hint);
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      color: var(--text-sub);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    @media (max-width: 600px) {
+      .article-card {
+        padding: 24px 18px;
+        border-radius: 14px;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-badge"></span>
+        <span>印占星盘 · 落盘</span>
+      </a>
+      <button class="lang-btn" id="langToggle" onclick="toggleLanguage()">Switch to English</button>
+    </div>
+  </header>
+
+  <main>
+    <article class="article-card">
+      
+      <!-- 中文版内容 -->
+      <div id="content-zh">
+        <div class="meta">
+          <span class="meta-tag">隐私政策</span>
+          <span>最新生效日期：2026 年 9 月 20 日</span>
+          <span>适用应用：印占星盘 (Vedic) / 落盘 (LuoPan)</span>
+        </div>
+
+        <h1>隐私保护政策</h1>
+        <div class="subtitle">我们尊重并保护每一位使用者的个人隐私与心灵探索空间。</div>
+
+        <div class="highlight-box">
+          <p><strong>核心承诺：</strong>本应用采用「本地优先与隐私至上（Privacy by Design）」架构。我们<strong>不设云端用户账户系统</strong>，您的所有八字生辰、排盘命书、个人笔记与占卜历史<strong>100% 仅保存在您本人的设备中</strong>，绝不上传至任何远程服务器，亦绝不向任何第三方出售或滥用您的个人信息。</p>
+        </div>
+
+        <h2>一、关于应用与开发者</h2>
+        <p>本隐私政策适用于由 <strong>LUOPAN</strong> 开发的移动应用程序，包括但不限于：</p>
+        <ul>
+          <li><strong>印占星盘（Vedic Astrology / Jyotish）</strong>（Android 包名：<code>com.luopan.vedic</code>）</li>
+          <li><strong>落盘（LuoPan）术数合集</strong>（Android 包名：<code>com.luopan</code>）</li>
+        </ul>
+        <p>若您对本政策有任何疑问，可通过电子邮箱 <strong>support@luopan.app</strong> 与我们取得联系。</p>
+
+        <h2>二、我们处理的信息与存储方式</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>数据类型</th>
+              <th>具体内容</th>
+              <th>处理方式与存储位置</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>生辰与档案数据</strong></td>
+              <td>出生年月日时、出生城市经纬度、性别、姓名或代号、命盘备注。</td>
+              <td><strong>纯本地存储</strong>于您设备内部沙盒数据库（tostore/SQLite），不上传云端，不用于身份追踪。</td>
+            </tr>
+            <tr>
+              <td><strong>罗盘与传感器数据</strong></td>
+              <td>地磁计、加速度计、陀螺仪读数。</td>
+              <td><strong>实时本地计算</strong>风水罗盘与方位度数，用完即释，不存储、不回传。</td>
+            </tr>
+            <tr>
+              <td><strong>内购与订阅状态</strong></td>
+              <td>匿名购买凭证（Receipt Token）、VIP 权益有效状态。</td>
+              <td>通过 Google Play Billing / Apple StoreKit 及 RevenueCat SDK 安全验证，用于开通会员特权。</td>
+            </tr>
+            <tr>
+              <td><strong>AI 解卦交互文本</strong></td>
+              <td>用户主动发起的解卦问题与卦象符号。</td>
+              <td>仅在用户点击「AI 解卦」时通过加密网络传输至大模型接口生成解读文本，<strong>不包含任何个人身份标识</strong>。</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>三、系统权限申请说明</h2>
+        <p>为确保核心功能正常运行，应用会按最小必要原则申请以下权限：</p>
+        <ul>
+          <li><strong>网络访问权限（<code>INTERNET</code> & <code>ACCESS_NETWORK_STATE</code>）</strong>：用于连接 RevenueCat 验证会员订阅状态、调用真随机数源（Random.org API）以及按需请求 AI 解卦大模型。</li>
+          <li><strong>相册保存权限（<code>NSPhotoLibraryAddUsageDescription</code> - iOS）</strong>：当您主动使用「导出图片」或「分享星盘」并将长图保存到系统相册时，系统将请求该授权。应用不会读取或扫描您相册中的其他已有照片。</li>
+          <li><strong>无任何敏感危险权限说明</strong>：应用<strong>不申请 GPS 精确地理定位（ACCESS_FINE_LOCATION）</strong>（星盘计算基于您手动选取的静态城市经纬度，罗盘基于设备磁北）；亦<strong>不申请相机、麦克风或通话记录</strong>等无关权限。</li>
+        </ul>
+
+        <h2>四、第三方 SDK 与网络服务</h2>
+        <p>为保障应用正常运转，我们仅集成了经严格安全审计的合规服务：</p>
+        <ol>
+          <li><strong>RevenueCat（内购与订阅凭证校验）</strong>：
+            <br>用于处理 Google Play 及 App Store 的内购订阅状态下发。RevenueCat 仅处理匿名设备标识与应用商店交易凭据，符合两端应用市场开发者政策。
+            <br>隐私政策参考：<a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat Privacy Policy</a>
+          </li>
+          <li><strong>Random.org（大气噪声真随机源）</strong>：
+            <br>用于起卦与随机数计算的大气物理噪声种子获取，传输走标准 HTTPS 加密通道，不含任何用户个人数据。
+          </li>
+          <li><strong>大语言模型 API 服务（如 DeepSeek / GLM 等）</strong>：
+            <br>仅在您主动发起 AI 解卦时使用，传输的内容严格限于当前卦象结构与文本提问，不附带任何个人隐私信息。AI 生成内容仅供文化学术研究与娱乐参考。
+          </li>
+        </ol>
+
+        <h2>五、您的数据控制与删除权利（GDPR / CCPA / 个人信息保护法）</h2>
+        <p>由于我们不在云端服务器保留任何您的个人数据，您对设备本地数据拥有完整的控制权：</p>
+        <ul>
+          <li><strong>查看与修改</strong>：随时在应用内的「档案」模块查看、编辑或更新个人与星盘信息。</li>
+          <li><strong>全量删除</strong>：您可在应用内依次点击「设置」&gt;「重置数据 / 清除所有历史」，即可一键永久擦除设备内的所有生辰档案与卜算记录。</li>
+          <li><strong>卸载销毁</strong>：直接卸载本应用，操作系统将自动彻底销毁应用沙盒内的全部本地数据。</li>
+        </ul>
+
+        <h2>六、未成年人隐私保护</h2>
+        <p>本应用主要面向对传统历法、天文计算与哲学文化感兴趣的成年受众。我们不会在知情的前提下收集 13 周岁（或您所在国家/地区规定的同等年龄标准）以下儿童的任何个人信息。若您发现儿童在未获监护人许可的情况下向我们提供了数据，请与我们取得联系，我们将协助您即时清除。</p>
+
+        <h2>七、本隐私政策的修订</h2>
+        <p>我们可能会根据相关法律法规或功能演进对本隐私政策进行更新。若发生重大变更，我们将在应用内版本更新说明或本页面发布最新公告。持续使用本应用即表示您知晓并接受更新后的政策。</p>
+
+        <h2>八、联系我们</h2>
+        <p>如对本隐私政策、数据处理或应用权限有任何意见、建议或申诉，欢迎通过以下渠道联系：</p>
+        <ul>
+          <li>开发者团队：<strong>LUOPAN Team</strong></li>
+          <li>联系邮箱：<strong>support@luopan.app</strong></li>
+          <li>官方主页：<a href="https://github.com/yyds-x/flutter_divination" target="_blank" rel="noopener">GitHub Project Repository</a></li>
+        </ul>
+      </div>
+
+      <!-- 英文版内容 (English Version) -->
+      <div id="content-en" style="display: none;">
+        <div class="meta">
+          <span class="meta-tag">Privacy Policy</span>
+          <span>Last Updated: September 20, 2026</span>
+          <span>Applicable Apps: Vedic Astrology (Vedic) / LuoPan</span>
+        </div>
+
+        <h1>Privacy Policy</h1>
+        <div class="subtitle">We deeply respect your privacy and provide a private space for mindful exploration.</div>
+
+        <div class="highlight-box">
+          <p><strong>Core Commitment:</strong> Our application is built upon a <strong>"Privacy by Design & Local-First"</strong> architecture. We operate <strong>NO cloud user registration or database</strong>. All your birth dates, astrological charts, notes, and divination history are stored <strong>100% locally on your device</strong>. We never transmit, sell, or profile your personal data.</p>
+        </div>
+
+        <h2>1. About the App & Developer</h2>
+        <p>This Privacy Policy applies to the mobile applications developed by <strong>LUOPAN</strong>, including:</p>
+        <ul>
+          <li><strong>Vedic Astrology (Jyotish)</strong> (Android Package: <code>com.luopan.vedic</code>)</li>
+          <li><strong>LuoPan Divination Suite</strong> (Android Package: <code>com.luopan</code>)</li>
+        </ul>
+        <p>If you have any questions regarding this policy, please reach out to us at <strong>support@luopan.app</strong>.</p>
+
+        <h2>2. Data We Process & How It Is Handled</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Data Category</th>
+              <th>Details</th>
+              <th>Processing & Storage</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Birth & Chart Profiles</strong></td>
+              <td>Date, time, coordinates of birth city, gender, name/alias, chart notes.</td>
+              <td><strong>Stored strictly locally</strong> in your device sandbox database (tostore/SQLite). Never uploaded to cloud servers.</td>
+            </tr>
+            <tr>
+              <td><strong>Compass & Sensor Data</strong></td>
+              <td>Magnetometer, accelerometer, and gyroscope readings.</td>
+              <td><strong>Processed in real-time on-device</strong> for compass orientation. Discarded immediately, never recorded.</td>
+            </tr>
+            <tr>
+              <td><strong>In-App Purchase & Subscriptions</strong></td>
+              <td>Anonymous receipt tokens and entitlement status.</td>
+              <td>Securely validated via Google Play Billing / Apple StoreKit and RevenueCat SDK to manage VIP access.</td>
+            </tr>
+            <tr>
+              <td><strong>AI Interpretation Prompts</strong></td>
+              <td>Hexagram figures and user-submitted questions.</td>
+              <td>Encrypted in transit over HTTPS to AI LLM APIs only when user taps "AI Interpretation". Contains <strong>NO personal identifiable information (PII)</strong>.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>3. System Permissions Required</h2>
+        <p>We strictly follow the principle of data minimization and only request essential permissions:</p>
+        <ul>
+          <li><strong>Internet Access (<code>INTERNET</code> & <code>ACCESS_NETWORK_STATE</code>)</strong>: Used to verify subscription status via RevenueCat, fetch physical entropy from Random.org, and handle on-demand AI interpretations.</li>
+          <li><strong>Photo Library Addition (<code>NSPhotoLibraryAddUsageDescription</code> on iOS)</strong>: Required solely when you explicitly tap "Save Image" or share astrological charts to your system photos album. We do NOT read or access existing photos.</li>
+          <li><strong>NO High-Risk Sensitive Permissions</strong>: We do <strong>NOT request GPS location (<code>ACCESS_FINE_LOCATION</code>)</strong>; charts use static city coordinates you select manually, and the compass utilizes magnetic north. We never request camera, microphone, or contacts access.</li>
+        </ul>
+
+        <h2>4. Third-Party SDKs & Services</h2>
+        <p>We work exclusively with vetted, compliant third-party providers:</p>
+        <ol>
+          <li><strong>RevenueCat (Subscription Management)</strong>:
+            <br>Used to handle in-app purchase validation on Google Play and Apple App Store. Operates with anonymous app user identifiers.
+            <br>Learn more: <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat Privacy Policy</a>.
+          </li>
+          <li><strong>Random.org (Atmospheric Noise API)</strong>:
+            <br>Supplies true random physical seeds for traditional casting. All transmissions use standard HTTPS encryption without personal data.
+          </li>
+          <li><strong>Generative AI Language Models (e.g., DeepSeek / GLM)</strong>:
+            <br>Activated only upon user demand. Transmitted text is confined to astrological context. AI-generated responses are intended for cultural inquiry and entertainment purposes only.
+          </li>
+        </ol>
+
+        <h2>5. Data Control & Deletion Rights (GDPR / CCPA Compliant)</h2>
+        <p>Since we do not store your data on external servers, you retain absolute sovereignty over your records:</p>
+        <ul>
+          <li><strong>Access & Modify</strong>: View and edit your profiles and history at any time inside the App.</li>
+          <li><strong>Full Deletion</strong>: Navigate to <strong>Settings &gt; Reset Data / Clear All History</strong> inside the App to instantly wipe all local records permanently.</li>
+          <li><strong>Device Uninstallation</strong>: Uninstalling the app removes all sandbox storage immediately and irreversibly.</li>
+        </ul>
+
+        <h2>6. Children's Privacy</h2>
+        <p>Our services are intended for a general audience interested in astronomical calculations and traditional philosophy. We do not knowingly collect personal information from children under 13 (or under 16 where required by local law). If you believe a minor has provided data without consent, please contact us for immediate deletion.</p>
+
+        <h2>7. Policy Changes</h2>
+        <p>We may periodically update this Privacy Policy. Any updates will be posted on this page with an updated effective date. Continued use of the app signifies your agreement to the revised terms.</p>
+
+        <h2>8. Contact Information</h2>
+        <p>For inquiries, feedback, or data privacy requests, please contact:</p>
+        <ul>
+          <li>Developer Team: <strong>LUOPAN Team</strong></li>
+          <li>Email: <strong>support@luopan.app</strong></li>
+          <li>Project Repository: <a href="https://github.com/yyds-x/flutter_divination" target="_blank" rel="noopener">GitHub Repository</a></li>
+        </ul>
+      </div>
+
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="privacy.html">隐私政策 (Privacy Policy)</a>
+      <span>·</span>
+      <a href="terms.html">服务条款 (Terms of Service)</a>
+      <span>·</span>
+      <a href="auto-renewal.html">自动续费说明 (Auto-Renewal)</a>
+    </div>
+    <div>&copy; 2026 LUOPAN. All rights reserved.</div>
+  </footer>
+
+  <script>
+    let currentLang = 'zh';
+
+    function toggleLanguage() {
+      const zhDiv = document.getElementById('content-zh');
+      const enDiv = document.getElementById('content-en');
+      const btn = document.getElementById('langToggle');
+
+      if (currentLang === 'zh') {
+        zhDiv.style.display = 'none';
+        enDiv.style.display = 'block';
+        btn.textContent = '切换至中文';
+        currentLang = 'en';
+        document.documentElement.lang = 'en';
+        localStorage.setItem('luopan_privacy_lang', 'en');
+      } else {
+        zhDiv.style.display = 'block';
+        enDiv.style.display = 'none';
+        btn.textContent = 'Switch to English';
+        currentLang = 'zh';
+        document.documentElement.lang = 'zh-CN';
+        localStorage.setItem('luopan_privacy_lang', 'zh');
+      }
+    }
+
+    // 初始化读取偏好或浏览器语言
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('luopan_privacy_lang');
+      const browserLang = navigator.language || navigator.userLanguage;
+      if (savedLang === 'en' || (!savedLang && browserLang && !browserLang.startsWith('zh'))) {
+        toggleLanguage();
+      }
+    });
+  </script>
+
+</body>
+</html>

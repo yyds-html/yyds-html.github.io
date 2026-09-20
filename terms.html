@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>用户服务协议与免责条款 - 印占星盘 & 落盘 | Terms of Service</title>
+  <meta name="description" content="印占星盘（Vedic）与落盘（LuoPan）用户服务协议、免责声明、VIP 会员订阅条款与自动续订取消指引。">
+  <style>
+    :root {
+      --bg: #F9F7F2;
+      --card-bg: #FFFFFF;
+      --text-main: #2A2C2B;
+      --text-sub: #5C625E;
+      --text-hint: #8D948F;
+      --accent: #556B48;
+      --accent-soft: rgba(85, 107, 72, 0.08);
+      --gold: #B88E3E;
+      --border: rgba(0, 0, 0, 0.08);
+      --header-border: rgba(0, 0, 0, 0.06);
+      --code-bg: #EFECE6;
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141615;
+        --card-bg: #1E201F;
+        --text-main: #E5E7E6;
+        --text-sub: #A2A8A4;
+        --text-hint: #6E7571;
+        --accent: #8FA87F;
+        --accent-soft: rgba(143, 168, 127, 0.12);
+        --gold: #D4A857;
+        --border: rgba(255, 255, 255, 0.08);
+        --header-border: rgba(255, 255, 255, 0.06);
+        --code-bg: #272A28;
+        --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.7;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: var(--bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--header-border);
+      padding: 16px 24px;
+    }
+
+    .header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-main);
+      text-decoration: none;
+    }
+
+    .logo-badge {
+      width: 26px;
+      height: 26px;
+      background: linear-gradient(135deg, var(--gold), var(--accent));
+      border-radius: 6px;
+    }
+
+    .lang-btn {
+      background-color: var(--accent-soft);
+      border: 1px solid var(--border);
+      color: var(--accent);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .lang-btn:hover {
+      background-color: var(--accent);
+      color: #FFF;
+    }
+
+    main {
+      max-width: 860px;
+      margin: 32px auto 64px;
+      padding: 0 24px;
+    }
+
+    .article-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: var(--shadow);
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 24px;
+      font-size: 0.85rem;
+      color: var(--text-hint);
+    }
+
+    .meta-tag {
+      background-color: var(--accent-soft);
+      color: var(--accent);
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 8px;
+      color: var(--text-main);
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      font-size: 1.05rem;
+      color: var(--text-sub);
+      margin-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      margin: 36px 0 14px;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h2::before {
+      content: "";
+      width: 4px;
+      height: 18px;
+      background-color: var(--gold);
+      border-radius: 2px;
+    }
+
+    p { margin-bottom: 14px; color: var(--text-sub); }
+    ul, ol { margin: 12px 0 18px 24px; color: var(--text-sub); }
+    li { margin-bottom: 8px; }
+    strong { color: var(--text-main); }
+
+    .highlight-box {
+      background: var(--accent-soft);
+      border-left: 4px solid var(--accent);
+      padding: 16px 20px;
+      border-radius: 0 12px 12px 0;
+      margin: 20px 0;
+    }
+
+    .highlight-box p { margin: 0; color: var(--text-main); font-weight: 500; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 0.9rem;
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 12px 14px;
+      text-align: left;
+    }
+
+    th {
+      background-color: var(--accent-soft);
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    td {
+      color: var(--text-sub);
+    }
+
+    code {
+      background-color: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.88em;
+      font-family: SFMono-Regular, Consolas, monospace;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    footer {
+      border-top: 1px solid var(--header-border);
+      padding: 32px 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-hint);
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin-bottom: 12px;
+    }
+
+    .footer-links a { color: var(--text-sub); text-decoration: none; }
+    .footer-links a:hover { color: var(--accent); }
+
+    @media (max-width: 600px) {
+      .article-card { padding: 24px 18px; border-radius: 14px; }
+      h1 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-badge"></span>
+        <span>印占星盘 · 落盘</span>
+      </a>
+      <button class="lang-btn" id="langToggle" onclick="toggleLanguage()">Switch to English</button>
+    </div>
+  </header>
+
+  <main>
+    <article class="article-card">
+      
+      <!-- 中文版内容 -->
+      <div id="content-zh">
+        <div class="meta">
+          <span class="meta-tag">用户协议</span>
+          <span>最新生效日期：2026 年 9 月 20 日</span>
+          <span>适用应用：印占星盘 (Vedic) / 落盘 (LuoPan)</span>
+        </div>
+
+        <h1>用户服务协议与免责声明</h1>
+        <div class="subtitle">感谢您选择印占星盘与落盘系列应用。在使用本软件前，请您务必审慎阅读并充分理解本协议各项条款。</div>
+
+        <div class="highlight-box">
+          <p><strong>核心声明：</strong>本应用所提供的一切天文排盘、经典印占吠陀算法、术数演算及 AI 卦象解构服务，<strong>均基于传统文化典籍模型与现代天文学几何坐标计算</strong>。所有测算结果与解读文本<strong>仅作为传统文化研讨、哲学思考及个人闲暇娱乐参考</strong>，绝不构成任何医疗、心理、法律、投资或商业决策建议。</p>
+        </div>
+
+        <h2>一、协议主体与适用范围</h2>
+        <p>本《用户服务协议》（以下简称“本协议”）由您（以下亦称“用户”）与 <strong>LUOPAN Team</strong>（以下简称“我们”或“平台”）之间共同缔结，适用于您下载、安装、注册（若有）、使用及访问以下由我们提供的全部移动客户端产品与数字服务：</p>
+        <ul>
+          <li><strong>印占星盘（Vedic Astrology / Jyotish）</strong>（Android 包名：<code>com.luopan.vedic</code>）</li>
+          <li><strong>落盘（LuoPan）术数文化合集</strong>（Android 包名：<code>com.luopan</code>）</li>
+        </ul>
+        <p>一旦您下载、安装或使用本软件，即视为您已完全阅读、理解并同意接受本协议及相关《隐私保护政策》的全部约束。若您不同意本协议的任一条款，请立即停止使用并卸载本软件。</p>
+
+        <h2>二、服务内容与技术原则</h2>
+        <p>应用为用户提供基于经典天文历法与术数学的数字化研习工具：</p>
+        <table>
+          <thead>
+            <tr>
+              <th>服务功能</th>
+              <th>算法/数据依托</th>
+              <th>服务定位</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>印占星盘排盘</strong></td>
+              <td>现代寿星天文历（tyme）、天文学星历算法（astronomia）、吠陀恒星黄道与岁差计算。</td>
+              <td>北印/南印盘式展示、D1/D9分盘、大运流年推演、八字合婚。</td>
+            </tr>
+            <tr>
+              <td><strong>风水罗盘方位</strong></td>
+              <td>高精度地磁传感器融合与倾角姿态补偿（地磁北）。</td>
+              <td>传统二十四山、八宅九星方向参考。</td>
+            </tr>
+            <tr>
+              <td><strong>传统术数起卦</strong></td>
+              <td>周易梅花易数、小六壬等，支持物理大气噪声真随机源（Random.org）。</td>
+              <td>个人思维觉察与传统义理研习。</td>
+            </tr>
+            <tr>
+              <td><strong>AI 辅助解卦</strong></td>
+              <td>大语言模型（LLM）语义生成与传统卦象意象解析。</td>
+              <td>提供基于卦象的启发式文化解读。</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>三、四大绝对免责条款（Critical Disclaimers）</h2>
+        <p>用户明确理解并无条件接受以下免责约定：</p>
+        <ol>
+          <li><strong>非医疗/非心理诊疗</strong>：本应用绝非专业医疗机构或心理辅导平台。排盘中的任何星象特征或心理意象均不得替代医师、心理咨询师的临床诊断或治疗方案。</li>
+          <li><strong>非法律仲裁/维权建议</strong>：应用内提供的卦象推演不可作为任何司法争议、民商事仲裁、劳动纠纷的裁决证据或策略支持。</li>
+          <li><strong>非金融/商业投资顾问</strong>：流年吉凶、财富宫位或运势提示均属文化符号推演，绝不构成买卖股票、加密货币、不动产或创业投资的理财建议。用户因任何现实财务决策所造成的盈亏，平台概不承担连带责任。</li>
+          <li><strong>决策自主与风险自担</strong>：任何现实决策的制定与执行完全属于用户个人自由意志范畴。您基于本应用生成的星盘长图或 AI 解读所做出的行动，由您自行承担全部法律后果与风险。</li>
+        </ol>
+
+        <h2>四、本地优先架构与数据主权</h2>
+        <ul>
+          <li><strong>零云端上传</strong>：我们践行「隐私至上与本地优先（Privacy by Design）」理念。应用<strong>不设中心化用户账号体系</strong>，您的个人生辰、盘面命书与历史记录 100% 存储于您设备本地沙盒中。</li>
+          <li><strong>数据自主掌控</strong>：您可随时在应用内修改档案，或通过「设置 &gt; 归零重始/清除数据」随时一键永久擦除设备中的全部数据记录。</li>
+          <li>详细数据处理规范请参见我们的<a href="privacy.html">《隐私保护政策》</a>。</li>
+        </ul>
+
+        <h2>五、VIP 会员增值服务与自动续费规则</h2>
+        <p>应用内提供不同周期的尊享会员订阅方案（如月度 VIP、年度 VIP、终身畅享版等）：</p>
+        <ul>
+          <li><strong>支付授权</strong>：所有内购支付均由官方应用商店（Google Play Billing 或 Apple StoreKit）提供底层支付保障，款项将从您的应用商店账户扣除。</li>
+          <li><strong>自动续订机制</strong>：订阅将以原选定周期和费用自动延展续期，除非您在<strong>当前订阅计费周期结束前至少 24 小时</strong>在应用商店系统设置中手动关闭自动续订。</li>
+          <li><strong>取消自动续订指引</strong>：
+            <br>• <strong>Google Play 用户</strong>：进入手机【Google Play 商店】&gt; 点击右上角头像 &gt;【付款和订阅】&gt;【订阅】&gt; 选择对应应用 &gt; 点击【取消订阅】。
+            <br>• <strong>iOS 用户</strong>：进入 iPhone【设置】&gt; 点击顶部【Apple ID】&gt;【订阅】&gt; 选中本应用 &gt; 点击【取消订阅】。
+          </li>
+          <li><strong>恢复购买</strong>：您在相同操作系统及同一商店账号下更换设备或重装软件时，可在应用内订阅界面点击「恢复购买」重新免费激活已购权益。</li>
+          <li><strong>退款政策</strong>：依据 Google Play 及 Apple App Store 的官方数字内容退款条例，所有扣款申请与退款申诉由应用商店官方平台直接受理与核准。</li>
+        </ul>
+
+        <h2>六、生成式 AI（AI 解卦）使用准则</h2>
+        <p>若您使用应用内的 AI 解构功能，须遵循以下规范：</p>
+        <ul>
+          <li><strong>真实认知</strong>：生成式 AI 具有概率性与随机探索特性，AI 提供的解读文本不代表客观真理或权威宿命论断；</li>
+          <li><strong>合规使用</strong>：严禁输入涉恐、涉暴、色情、煽动仇恨、侵犯他人隐私或封建迷信诈骗相关的 Prompt 提示词；</li>
+          <li><strong>反馈与重置</strong>：若 AI 产生不适或不恰当的内容，您可随时在界面上点击重新起卦或向我们进行问题反馈。</li>
+        </ul>
+
+        <h2>七、知识产权与用户行为准则</h2>
+        <p>本软件的所有程序源代码、算法模型、界面美工设计、音效动效、文字内容及商标徽标，其完整知识产权均由 <strong>LUOPAN Team</strong> 依法享有并保留全部权利。严禁任何第三方实施以下行为：</p>
+        <ul>
+          <li>对软件二进制代码进行反向工程、反向汇编、反编译或脱壳逆向；</li>
+          <li>对排盘算法或软件界面进行未经授权的批量爬取、商业二次封装或镜像分发；</li>
+          <li>利用本软件进行封建迷信敛财、传销骗局或任何损害社会公共利益的违法活动。</li>
+        </ul>
+
+        <h2>八、未成年人保护</h2>
+        <p>本应用适合具备完全民事行为能力、能够理性甄别文化符号与现实生活边界的成年受众。未成年人应在监护人指导和监督下浏览，不可盲目沉迷或依据算法结论做出现实重大决策。</p>
+
+        <h2>九、协议的变更与终止</h2>
+        <p>我们保留根据法律法规演进及产品功能迭代对本协议进行适度修订的权利。更新后的协议将在本页面及应用内显著位置公布生效。如果您在本协议更新后继续使用本服务，即表示您完全接受经修订的协议内容。</p>
+
+        <h2>十、法律管辖与联系支持</h2>
+        <p>本协议的订立、生效、解释与争议解决均适用中华人民共和国法律（不含冲突法规则）。因本协议引起的任何纠纷，各方应首先友好协商解决；协商不成的，应提交平台开发者住所地有管辖权的人民法院诉讼解决。</p>
+        <p>若您对本协议有任何建议、疑问或商务咨询，欢迎随时与我们沟通：</p>
+        <ul>
+          <li>运营团队：<strong>LUOPAN Team</strong></li>
+          <li>服务邮箱：<strong>support@luopan.app</strong></li>
+          <li>开源主页：<a href="https://github.com/yyds-x/flutter_divination" target="_blank" rel="noopener">GitHub Project Repository</a></li>
+        </ul>
+      </div>
+
+      <!-- 英文版内容 (English Version) -->
+      <div id="content-en" style="display: none;">
+        <div class="meta">
+          <span class="meta-tag">Terms of Service</span>
+          <span>Last Updated: September 20, 2026</span>
+          <span>Applicable Apps: Vedic Astrology (Vedic) / LuoPan</span>
+        </div>
+
+        <h1>User Agreement & Terms of Service</h1>
+        <div class="subtitle">Thank you for choosing Vedic Astrology and the LuoPan App Suite. Please read and understand these terms carefully before using our software.</div>
+
+        <div class="highlight-box">
+          <p><strong>Fundamental Disclaimer:</strong> All astrological chart computations, Vedic algorithms, and AI divination insights in this application <strong>are based on classic cosmological treatises and modern astronomical geometric formulas</strong>. All outputs are provided <strong>exclusively for personal reflection, cultural study, and leisure entertainment</strong>. Under NO circumstances do they constitute medical, legal, psychological, or financial counsel.</p>
+        </div>
+
+        <h2>1. Scope & Parties</h2>
+        <p>These Terms of Service constitute a legally binding agreement between you ("User") and <strong>LUOPAN Team</strong> ("we", "us", or "Platform"), governing your access to and use of our mobile applications:</p>
+        <ul>
+          <li><strong>Vedic Astrology (Jyotish)</strong> (Android Package: <code>com.luopan.vedic</code>)</li>
+          <li><strong>LuoPan Divination Suite</strong> (Android Package: <code>com.luopan</code>)</li>
+        </ul>
+        <p>By downloading, installing, or accessing our applications, you acknowledge that you have read, understood, and agree to be bound by these Terms and our <a href="privacy.html">Privacy Policy</a>. If you do not agree, please discontinue use immediately.</p>
+
+        <h2>2. Services & Calculation Architecture</h2>
+        <p>Our app provides specialized computational tools for classical astronomical studies:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Underlying Engine</th>
+              <th>Purpose & Scope</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Vedic Horoscopes</strong></td>
+              <td>Astronomical ephemeris (astronomia), Tyme calendar, sidereal zodiac calculations.</td>
+              <td>North/South Indian chart rendering, divisional charts (D1/D9), Vimshottari Dashas, Ashtakoota compatibility.</td>
+            </tr>
+            <tr>
+              <td><strong>Feng Shui Compass</strong></td>
+              <td>Real-time magnetometer fusion with pitch & roll tilt compensation (Magnetic North).</td>
+              <td>Directional guidance without requesting GPS tracking.</td>
+            </tr>
+            <tr>
+              <td><strong>Classical Divination</strong></td>
+              <td>I Ching, Plum Blossom (Mei Hua), Xiao Liu Ren, backed by true atmospheric noise entropy (Random.org).</td>
+              <td>Philosophical inquiry and contemplative study.</td>
+            </tr>
+            <tr>
+              <td><strong>AI Interpretations</strong></td>
+              <td>Large Language Model (LLM) semantic symbol analysis.</td>
+              <td>Heuristic metaphors based on traditional lore.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>3. Crucial Legal Disclaimers</h2>
+        <p>By using the App, you explicitly acknowledge and accept:</p>
+        <ol>
+          <li><strong>No Medical or Clinical Diagnosis</strong>: The App is neither a medical clinic nor a psychiatric counseling service. No chart configuration should substitute for licensed professional healthcare advice.</li>
+          <li><strong>No Legal Counsel</strong>: Divination outputs cannot serve as evidence or strategies in legal disputes, civil claims, or arbitration proceedings.</li>
+          <li><strong>No Financial or Investment Advisory</strong>: Discussions of career or fortune houses are cultural metaphors. They never constitute advice to trade securities, buy real estate, or venture capital. All financial decisions are made at your sole discretion and risk.</li>
+          <li><strong>Autonomous Agency</strong>: You retain absolute free will. You are solely responsible for actions you choose to take based on readings obtained through this application.</li>
+        </ol>
+
+        <h2>4. Local-First Sovereignty & Zero Cloud Storage</h2>
+        <ul>
+          <li><strong>No Centralized Accounts</strong>: We adopt a strict "Privacy by Design" model. We do not operate remote user databases. Your birth dates, charts, notes, and divination logs reside 100% locally on your device.</li>
+          <li><strong>Total Erasure Control</strong>: You may edit records at any time or navigate to <strong>Settings &gt; Reset Data</strong> to permanently purge all data from your device sandbox.</li>
+          <li>Review our complete <a href="privacy.html">Privacy Policy</a> for full details.</li>
+        </ul>
+
+        <h2>5. VIP Subscriptions & Auto-Renewal Rules</h2>
+        <p>Premium tiers (Monthly VIP, Annual VIP, Lifetime Pass) unlock extended features:</p>
+        <ul>
+          <li><strong>Payment Processing</strong>: In-app payments are processed securely through Google Play Billing (Android) or Apple StoreKit (iOS).</li>
+          <li><strong>Automatic Renewal</strong>: Subscriptions renew automatically at the selected price and billing interval unless turned off <strong>at least 24 hours prior to the end of the current billing cycle</strong>.</li>
+          <li><strong>Managing & Cancelling Subscriptions</strong>:
+            <br>• <strong>Google Play</strong>: Open Google Play Store &gt; Profile avatar &gt; Payments & Subscriptions &gt; Subscriptions &gt; Select App &gt; Cancel Subscription.
+            <br>• <strong>iOS</strong>: Open iPhone Settings &gt; Apple ID &gt; Subscriptions &gt; Select App &gt; Cancel Subscription.
+          </li>
+          <li><strong>Restoration of Purchases</strong>: You may restore active subscriptions across devices sharing the same OS account by clicking "Restore Purchases" in the App.</li>
+          <li><strong>Refunds</strong>: Refund requests are handled exclusively by Apple or Google in accordance with their standard consumer refund guidelines.</li>
+        </ul>
+
+        <h2>6. Generative AI Guidelines</h2>
+        <ul>
+          <li>Generative AI interpretations are simulated semantic prompts and do not represent absolute truths or fatalistic decrees;</li>
+          <li>Users must not submit prompts intended to harass, threaten, promote illegal acts, or engage in deceptive practices;</li>
+          <li>Users can request a new interpretation or submit feedback if any inappropriate output is encountered.</li>
+        </ul>
+
+        <h2>7. Intellectual Property & Acceptable Use</h2>
+        <p>All software architectures, source code, visual iconography, algorithm logic, and branding remain the exclusive intellectual property of <strong>LUOPAN Team</strong>. You agree not to:</p>
+        <ul>
+          <li>Reverse engineer, decompile, or extract proprietary algorithms from the binaries;</li>
+          <li>Harvest, scrape, or repackage chart calculations for commercial resale;</li>
+          <li>Utilize the software for fraudulent schemes or harmful activities.</li>
+        </ul>
+
+        <h2>8. Minor Protection</h2>
+        <p>Our app is intended for mature individuals capable of distinguishing traditional philosophical metaphors from factual reality. Minors should use the app only under parental or guardian guidance.</p>
+
+        <h2>9. Modifications & Termination</h2>
+        <p>We reserve the right to revise these Terms to reflect technical updates or legal compliance changes. Material updates will be published on this page. Your continued use after notice constitutes acceptance.</p>
+
+        <h2>10. Governing Law & Contact</h2>
+        <p>These terms are governed by and construed in accordance with the laws of the People's Republic of China, without regard to conflict of law principles. Parties shall seek amicable resolution for any disputes before submitting to local jurisdiction.</p>
+        <ul>
+          <li>Development Team: <strong>LUOPAN Team</strong></li>
+          <li>Support Email: <strong>support@luopan.app</strong></li>
+          <li>Repository: <a href="https://github.com/yyds-x/flutter_divination" target="_blank" rel="noopener">GitHub Project Repository</a></li>
+        </ul>
+      </div>
+
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="privacy.html">隐私政策 (Privacy Policy)</a>
+      <span>·</span>
+      <a href="terms.html">服务条款 (Terms of Service)</a>
+      <span>·</span>
+      <a href="auto-renewal.html">自动续费说明 (Auto-Renewal)</a>
+    </div>
+    <div>&copy; 2026 LUOPAN. All rights reserved.</div>
+  </footer>
+
+  <script>
+    let currentLang = 'zh';
+
+    function toggleLanguage() {
+      const zhDiv = document.getElementById('content-zh');
+      const enDiv = document.getElementById('content-en');
+      const btn = document.getElementById('langToggle');
+
+      if (currentLang === 'zh') {
+        zhDiv.style.display = 'none';
+        enDiv.style.display = 'block';
+        btn.textContent = '切换至中文';
+        currentLang = 'en';
+        document.documentElement.lang = 'en';
+        localStorage.setItem('luopan_terms_lang', 'en');
+      } else {
+        zhDiv.style.display = 'block';
+        enDiv.style.display = 'none';
+        btn.textContent = 'Switch to English';
+        currentLang = 'zh';
+        document.documentElement.lang = 'zh-CN';
+        localStorage.setItem('luopan_terms_lang', 'zh');
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('luopan_terms_lang');
+      const browserLang = navigator.language || navigator.userLanguage;
+      if (savedLang === 'en' || (!savedLang && browserLang && !browserLang.startsWith('zh'))) {
+        toggleLanguage();
+      }
+    });
+  </script>
+
+</body>
+</html>
