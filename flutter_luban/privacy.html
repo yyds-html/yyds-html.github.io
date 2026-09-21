@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>隐私保护政策 - 鲁班图像工具箱 | Privacy Policy - Flutter Luban</title>
+  <meta name="description" content="鲁班 (Flutter Luban) 高性能端侧图片压缩与编辑工具箱隐私保护政策。我们坚持本地优先与端侧沙盒处理，绝不上传您的任何图片与个人隐私数据。">
+  <style>
+    :root {
+      --bg: #F8FAFC;
+      --card-bg: #FFFFFF;
+      --text-main: #0F172A;
+      --text-sub: #475569;
+      --text-hint: #94A3B8;
+      --accent: #2563EB;
+      --accent-soft: rgba(37, 99, 235, 0.08);
+      --accent-hover: #1D4ED8;
+      --amber: #D97706;
+      --amber-soft: rgba(217, 119, 6, 0.1);
+      --border: rgba(148, 163, 184, 0.2);
+      --header-border: rgba(148, 163, 184, 0.15);
+      --code-bg: #F1F5F9;
+      --shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0B0F19;
+        --card-bg: #141B2D;
+        --text-main: #F1F5F9;
+        --text-sub: #94A3B8;
+        --text-hint: #64748B;
+        --accent: #3B82F6;
+        --accent-soft: rgba(59, 130, 246, 0.14);
+        --accent-hover: #60A5FA;
+        --amber: #F59E0B;
+        --amber-soft: rgba(245, 158, 11, 0.15);
+        --border: rgba(255, 255, 255, 0.1);
+        --header-border: rgba(255, 255, 255, 0.08);
+        --code-bg: #1E293B;
+        --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.75;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: var(--bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--header-border);
+      padding: 16px 24px;
+    }
+
+    .header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-main);
+      text-decoration: none;
+      letter-spacing: 0.3px;
+    }
+
+    .logo-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, var(--accent), var(--amber));
+      border-radius: 8px;
+      color: #FFF;
+      font-size: 16px;
+    }
+
+    .lang-btn {
+      background-color: var(--accent-soft);
+      border: 1px solid var(--border);
+      color: var(--accent);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .lang-btn:hover {
+      background-color: var(--accent);
+      color: #FFF;
+    }
+
+    main {
+      max-width: 860px;
+      margin: 32px auto 64px;
+      padding: 0 24px;
+    }
+
+    .article-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: var(--shadow);
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 24px;
+      font-size: 0.85rem;
+      color: var(--text-hint);
+      align-items: center;
+    }
+
+    .meta-tag {
+      background-color: var(--accent-soft);
+      color: var(--accent);
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 8px;
+      color: var(--text-main);
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      font-size: 1.05rem;
+      color: var(--text-sub);
+      margin-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      margin: 36px 0 14px;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      background-color: var(--accent);
+      border-radius: 2px;
+    }
+
+    p {
+      margin-bottom: 14px;
+      color: var(--text-sub);
+    }
+
+    ul, ol {
+      margin: 12px 0 18px 24px;
+      color: var(--text-sub);
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    strong {
+      color: var(--text-main);
+    }
+
+    .highlight-box {
+      background: var(--accent-soft);
+      border-left: 4px solid var(--accent);
+      padding: 18px 20px;
+      border-radius: 0 12px 12px 0;
+      margin: 24px 0;
+    }
+
+    .highlight-box p {
+      margin: 0;
+      color: var(--text-main);
+      font-weight: 500;
+    }
+
+    .tip-box {
+      background: var(--amber-soft);
+      border-left: 4px solid var(--amber);
+      padding: 16px 20px;
+      border-radius: 0 12px 12px 0;
+      margin: 20px 0;
+    }
+
+    .tip-box p {
+      margin: 0;
+      color: var(--text-main);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 22px 0;
+      font-size: 0.9rem;
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 12px 14px;
+      text-align: left;
+    }
+
+    th {
+      background-color: var(--accent-soft);
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    td {
+      color: var(--text-sub);
+    }
+
+    code {
+      background-color: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.88em;
+      font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      color: var(--accent-hover);
+    }
+
+    footer {
+      border-top: 1px solid var(--header-border);
+      padding: 32px 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-hint);
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      color: var(--text-sub);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    @media (max-width: 600px) {
+      .article-card {
+        padding: 24px 18px;
+        border-radius: 14px;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+      table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-badge">🛠️</span>
+        <span>鲁班 · 图像工具箱</span>
+      </a>
+      <button class="lang-btn" id="langToggle" onclick="toggleLanguage()">Switch to English</button>
+    </div>
+  </header>
+
+  <main>
+    <article class="article-card">
+      
+      <!-- 中文版内容 (Chinese Version) -->
+      <div id="content-zh">
+        <div class="meta">
+          <span class="meta-tag">隐私保护政策</span>
+          <span>生效日期：2026 年 9 月 20 日</span>
+          <span>应用包名：<code>com.cmxc.wallpaper</code></span>
+        </div>
+
+        <h1>隐私保护政策</h1>
+        <div class="subtitle">我们深知图像数据与个人隐私的敏感性，坚守「纯本地计算 · 零云端上传」的安全底线。</div>
+
+        <div class="highlight-box">
+          <p><strong>核心承诺：</strong>鲁班（Flutter Luban）采用纯端侧离线计算与隐私至上（Privacy by Design）架构设计。<strong>我们不设远程用户账户体系，您选取的全部照片、图片压缩流、裁剪涂鸦笔迹、尺寸参数与历史记录 100% 仅在您的本地设备沙盒内执行</strong>。绝不上传至任何外部云端服务器，亦绝无跨应用追踪或广告监控行为。</p>
+        </div>
+
+        <h2>一、关于应用与开发者主体</h2>
+        <p>本隐私政策由 <strong>鲁班研发团队（Flutter Luban Team / CMXC）</strong>（以下简称“我们”）发布，适用于您在智能手机、平板等移动终端设备上安装、使用及访问的：</p>
+        <ul>
+          <li><strong>应用名称</strong>：鲁班 (Flutter Luban / 鲁班图像工具箱)</li>
+          <li><strong>应用包名 (Package Name)</strong>：<code>com.cmxc.wallpaper</code></li>
+          <li><strong>开发者支持邮箱</strong>：<code>support@cmxc.com</code></li>
+        </ul>
+
+        <h2>二、我们处理的数据类型与存储方式</h2>
+        <p>为了向您提供高品质的图像压缩与创作服务，应用涉及的数据类型及其本地处理机制如下：</p>
+        <table>
+          <thead>
+            <tr>
+              <th>数据类别</th>
+              <th>具体内容</th>
+              <th>处理方式与存储范围</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>图像与媒体文件</strong></td>
+              <td>您主动选取的原图照片、分辨率尺寸、文件体积、色彩深度及 EXIF 基础元数据。</td>
+              <td><strong>100% 纯本地离线处理</strong>。在设备本地内存与临时沙盒目录内进行 Luban 算法压缩与格式转换，处理后由您决定是否保存到相册，绝不上传至任何云端服务器。</td>
+            </tr>
+            <tr>
+              <td><strong>图片编辑涂鸦与标注</strong></td>
+              <td>裁剪框选范围、旋转镜像角度、马赛克图层、文字标签与滤镜调节数值。</td>
+              <td><strong>纯端侧矢量渲染</strong>。仅在当前编辑界面的图形画布中实时演算，合成为导出图后即时释放，不作任何外部同步。</td>
+            </tr>
+            <tr>
+              <td><strong>压缩配置偏好设置</strong></td>
+              <td>默认输出格式（JPEG/PNG/WebP/HEIC）、默认目标压缩质量百分比、历史记录数量上限。</td>
+              <td><strong>本地轻量 Key-Value 数据库</strong>。仅存储于设备的私有应用沙盒中，用于记忆您的个性化偏好。</td>
+            </tr>
+            <tr>
+              <td><strong>本地历史记录与统计</strong></td>
+              <td>压缩任务的时间戳、原图尺寸、压缩后尺寸、体积缩减比率及本地缩略图预览。</td>
+              <td><strong>仅在本地存储</strong>。方便您随时回溯与比较压缩效果，您可在设置中一键彻底永久清空。</td>
+            </tr>
+            <tr>
+              <td><strong>宣传展图工程草稿</strong></td>
+              <td>宣传样机设备型号、外壳颜色、渐变背景配色、标题标语文本。</td>
+              <td><strong>本地沙盒私有存储</strong>。方便您随时二次编辑与导出，不涉及任何远程服务器传输。</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>三、系统权限申请与调用规范</h2>
+        <p>遵循操作系统与工信部、应用商店的「最小必要（Least Privilege）」原则，应用仅在您主动触发对应业务动作时向系统动态申请必要授权：</p>
+        <ul>
+          <li><strong>读取本地相册/媒体文件权限（<code>READ_MEDIA_IMAGES</code> / <code>READ_EXTERNAL_STORAGE</code> / iOS <code>NSPhotoLibraryUsageDescription</code>）</strong>：
+            <br>仅在您主动点击「选择图片」或「批量压缩」并进入系统选图器时调用。我们<strong>绝不会在后台静默读取、扫描或索引</strong>您的个人相册文件。</li>
+          <li><strong>保存图片到系统相册权限（<code>WRITE_EXTERNAL_STORAGE</code> [针对 Android 10 及以下系统版本] / iOS <code>NSPhotoLibraryAddUsageDescription</code>）</strong>：
+            <br>仅在您完成压缩、编辑或展图制作后，主动点击「保存至相册」按钮时，将生成的新图片写入系统相册公用目录。</li>
+          <li><strong>相机拍摄权限（<code>CAMERA</code>，可选）</strong>：
+            <br>仅在您主动使用拍照取景直接进行即时压缩或标注时请求。若您不需要拍摄新照片，可直接拒绝该权限，完全不影响从相册中选择已有照片。</li>
+          <li><strong>敏感权限声明</strong>：
+            <br>本应用<strong>坚决不申请、不收集</strong>地理位置（<code>ACCESS_FINE_LOCATION</code>）、麦克风录音、手机通讯录、通话记录、短信、剪贴板监控等任何与图像处理无关的系统权限。</li>
+        </ul>
+
+        <h2>四、第三方 SDK 与网络安全说明</h2>
+        <div class="tip-box">
+          <p><strong>关于网络安全与 SDK 清单声明：</strong>本应用设计为纯离线生产力工具。应用安装包内<strong>未集成任何第三方用户行为打点 SDK、商业广告投放 SDK、跨应用推送 SDK 或身份画像分析 SDK</strong>。应用不会自动发起任何非用户主动意图的网络请求。</p>
+        </div>
+        <p>当您在结果页面或展示工坊中点击「系统分享」按钮时，将调起操作系统的标准原生分享面板（Share Sheet），通过操作系统将文件安全递交至您自行选择的目标第三方应用（如微信、QQ、网盘、邮件等），该第三方应用对文件的接收与处理遵从其各自独立的隐私政策。</p>
+
+        <h2>五、数据存储周期与缓存清理控制权</h2>
+        <p>您对存储于本地设备中的所有数据拥有绝对且自主的控制权：</p>
+        <ul>
+          <li><strong>临时图像缓存清理</strong>：压缩和编辑过程中产生的中间临时文件存储于沙盒临时缓存目录。您可随时进入应用<strong>「设置」&gt;「存储与缓存管理」</strong>查看当前临时占用大小，并点击<strong>「清理」</strong>按钮一键彻底擦除。</li>
+          <li><strong>历史记录全量清空</strong>：在「设置」界面点击<strong>「清空全部历史记录」</strong>，将永久销毁所有本地历史条目及关联缩略图，该操作无法撤销。</li>
+          <li><strong>应用卸载彻底销毁</strong>：当您从设备上卸载本应用时，操作系统将自动彻底销毁应用沙盒内的全部本地配置文件、缓存数据及历史记录，不留任何数据残留。</li>
+        </ul>
+
+        <h2>六、数据主体权利保障（GDPR / CCPA / 个人信息保护法）</h2>
+        <p>依据全球主流数据合规标准（包括《中华人民共和国个人信息保护法》、欧盟《通用数据保护条例》(GDPR)、美国《加利福尼亚州消费者隐私法》(CCPA) 等）：</p>
+        <ul>
+          <li><strong>访问权与知情权</strong>：您可以通过本政策充分获知所有数据处理规则，所有业务数据直接显式展示在您的手机客户端。</li>
+          <li><strong>更正与删除权</strong>：由于所有数据均纯本地驻留，您有权随时在本地界面直接修改设置偏好，或通过清空操作实现数据的即刻物理删除。</li>
+          <li><strong>无出售与不分享承诺</strong>：我们在此郑重承诺，绝不出售、出租、出租买卖或向任何外部商业实体分享您的任何数据。</li>
+        </ul>
+
+        <h2>七、未成年人与儿童个人信息保护</h2>
+        <p>我们的产品属于面向通用大众的效率图像工具，不设定年龄门槛，亦不针对 14 周岁（或当地法定儿童年龄标准）以下的儿童开展任何定向数据收集。鉴于我们完全不收集任何个人身份信息，因此亦不会对儿童信息进行差别化处理。若您是未成年人的监护人，如有任何关于儿童使用本软件的疑问，请通过官方渠道与我们沟通。</p>
+
+        <h2>八、政策的修订与生效</h2>
+        <p>随着产品功能的迭代升级及相关法律法规要求的更新，我们可能会适时更新本隐私保护政策。任何实质性修改均会在本官方页面发布，并在应用内关于页面提供可查阅的最新指引。持续使用本应用即代表您理解并认同经修订的隐私保护条款。</p>
+
+        <h2>九、联系我们与合规监督</h2>
+        <p>如果您对本隐私政策、应用权限调用或端侧数据保护机制有任何疑问、意见、投诉或建议，欢迎随时通过以下方式与我们取得联系：</p>
+        <ul>
+          <li><strong>运营主体</strong>：鲁班研发团队 (Flutter Luban Team / CMXC)</li>
+          <li><strong>隐私安全专职邮箱</strong>：<a href="mailto:support@cmxc.com">support@cmxc.com</a></li>
+          <li><strong>响应时效</strong>：我们将在核实您的诉求后于 15 个工作日内给予正式答复与处理。</li>
+        </ul>
+      </div>
+
+      <!-- 英文版内容 (English Version) -->
+      <div id="content-en" style="display: none;">
+        <div class="meta">
+          <span class="meta-tag">Privacy Policy</span>
+          <span>Effective Date: September 20, 2026</span>
+          <span>Package Name: <code>com.cmxc.wallpaper</code></span>
+        </div>
+
+        <h1>Privacy Policy</h1>
+        <div class="subtitle">High-performance image compression and editing with zero cloud uploads and local-first sandbox processing.</div>
+
+        <div class="highlight-box">
+          <p><strong>Core Privacy Principle:</strong> Flutter Luban is engineered strictly upon a <strong>"Privacy by Design & 100% Local-First"</strong> architecture. <strong>We operate NO remote user account database. All photos you choose, compression streams, crops, brush strokes, and editing records are executed exclusively on your local device.</strong> We never upload your personal images to any external cloud server, nor do we track your activity across apps.</p>
+        </div>
+
+        <h2>1. About the Application & Developer</h2>
+        <p>This Privacy Policy is published by the <strong>Flutter Luban Development Team (CMXC)</strong> ("we", "us", or "our"), governing your use of:</p>
+        <ul>
+          <li><strong>Application Name</strong>: 鲁班 (Flutter Luban / Luban - Photo Compress & Edit)</li>
+          <li><strong>Package Identifier</strong>: <code>com.cmxc.wallpaper</code></li>
+          <li><strong>Developer Support Email</strong>: <code>support@cmxc.com</code></li>
+        </ul>
+
+        <h2>2. Data Types We Process & Local Handling Method</h2>
+        <p>To deliver fast and reliable image compression and design studio functionality, the app processes the following categories of data locally:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Specific Details</th>
+              <th>Processing & Storage Scope</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Image & Media Files</strong></td>
+              <td>Selected raw photos, dimensions, file size, color depth, and essential EXIF metadata.</td>
+              <td><strong>100% strictly on-device</strong>. Processed in local memory and sandbox cache using high-efficiency Luban algorithms. Saved to your gallery only upon your explicit instruction. Never transmitted externally.</td>
+            </tr>
+            <tr>
+              <td><strong>Image Editing Operations</strong></td>
+              <td>Crop boxes, rotation angles, mosaic brush strokes, text annotations, and filter settings.</td>
+              <td><strong>Local vector rendering</strong>. Computed in real time on the canvas and released immediately after export. No remote synchronization.</td>
+            </tr>
+            <tr>
+              <td><strong>Configuration & Preferences</strong></td>
+              <td>Output format choice (JPEG/PNG/WebP/HEIC), default target quality threshold, and history item limits.</td>
+              <td><strong>Local lightweight Key-Value storage</strong> within the app's private sandbox to remember your custom preferences.</td>
+            </tr>
+            <tr>
+              <td><strong>Local Compression History</strong></td>
+              <td>Timestamps, before/after dimensions and sizes, compression ratio, and local thumbnail caches.</td>
+              <td><strong>Kept strictly on-device</strong> for your review. Can be cleared permanently at any time from the in-app Settings.</td>
+            </tr>
+            <tr>
+              <td><strong>Showcase Studio Drafts</strong></td>
+              <td>Device mockup models, frame colors, gradient backgrounds, and showcase text slogans.</td>
+              <td><strong>Private local storage</strong> to enable re-editing and high-res export without sending data to servers.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>3. Device Permissions & Minimal Access Policy</h2>
+        <p>In adherence to Apple App Store Guidelines, Google Play User Data policies, and global privacy standards, permissions are requested strictly upon user initiation:</p>
+        <ul>
+          <li><strong>Photo / Media Access (<code>READ_MEDIA_IMAGES</code> / <code>READ_EXTERNAL_STORAGE</code> / iOS <code>NSPhotoLibraryUsageDescription</code>)</strong>:
+            <br>Requested only when you tap to select photos from your device gallery. We <strong>never silently scan or upload</strong> your private photo library in the background.</li>
+          <li><strong>Save to Photo Album (<code>WRITE_EXTERNAL_STORAGE</code> [Android 10 and below] / iOS <code>NSPhotoLibraryAddUsageDescription</code>)</strong>:
+            <br>Requested only when you actively choose to export the compressed or edited picture to your system photo album.</li>
+          <li><strong>Camera Capture (<code>CAMERA</code>, Optional)</strong>:
+            <br>Used solely if you choose to snap a live photo directly inside the app for instantaneous editing. If unnecessary, you may decline without impairing normal gallery picking.</li>
+          <li><strong>No Sensitive or High-Risk Permissions</strong>:
+            <br>We do <strong>NOT request or access</strong> GPS location (<code>ACCESS_FINE_LOCATION</code>), microphone audio, contacts, phone calls, SMS messages, or clipboard monitoring.</li>
+        </ul>
+
+        <h2>4. Third-Party SDKs & Network Safety</h2>
+        <div class="tip-box">
+          <p><strong>Zero Third-Party Tracking Statement:</strong> Flutter Luban is a self-contained productivity tool. The binary contains <strong>NO third-party behavioral analytics SDKs, advertising ad-networks, cross-app tracking beacons, or profiling SDKs</strong>. The application makes zero unsolicited background network connections.</p>
+        </div>
+        <p>When you click the system "Share" button, the standard OS Native Share Sheet is invoked, allowing you to hand over the processed image to your chosen third-party app (e.g., messaging or email). That transaction is governed solely by the privacy policy of the destination app.</p>
+
+        <h2>5. Data Retention & Sandbox Cache Management</h2>
+        <p>You have full sovereignty over all files stored in your local sandbox:</p>
+        <ul>
+          <li><strong>Temporary Cache Cleanup</strong>: Intermediate compression files are stored in the temporary sandbox directory. You can inspect cache size and purge all files anytime via <strong>Settings &gt; Storage & Cache Management &gt; Clear</strong>.</li>
+          <li><strong>Purge All History</strong>: Tapping <strong>"Clear All History"</strong> in Settings immediately and irrevocably deletes all compression records and local thumbnails.</li>
+          <li><strong>Full Erasure on Uninstall</strong>: Uninstalling the application triggers the operating system to automatically and completely erase all sandbox data, settings, and temporary files.</li>
+        </ul>
+
+        <h2>6. Data Subject Rights (GDPR / CCPA / PIPL)</h2>
+        <p>In compliance with international regulations (GDPR, California CCPA/CPRA, and China PIPL):</p>
+        <ul>
+          <li><strong>Right to Know & Access</strong>: All operational data is directly visible on your device screen.</li>
+          <li><strong>Right to Rectification & Erasure</strong>: You have full control to edit settings or permanently wipe local databases at your own discretion.</li>
+          <li><strong>Non-Sale Commitment</strong>: We explicitly pledge that we do not sell, rent, license, or disclose your personal data or images to any third party.</li>
+        </ul>
+
+        <h2>7. Children's Privacy Protection</h2>
+        <p>Our utility does not target children under the age of 13 (or under 16 where stipulated by local laws), nor do we intentionally solicit personal data from children. Because our application does not collect personal identifiers, children's data is safeguarded by default through our offline-first architecture.</p>
+
+        <h2>8. Updates to This Policy</h2>
+        <p>We may periodically update this policy to reflect product improvements or regulatory developments. Any amendments will be published on this page with an updated effective date. Continued use of the application indicates your acknowledgment of the updated terms.</p>
+
+        <h2>9. Contact Us</h2>
+        <p>If you have any questions, feedback, or inquiries regarding this Privacy Policy or our on-device security safeguards, please reach out to:</p>
+        <ul>
+          <li><strong>Entity</strong>: Flutter Luban Development Team (CMXC)</li>
+          <li><strong>Email</strong>: <a href="mailto:support@cmxc.com">support@cmxc.com</a></li>
+          <li><strong>Response Window</strong>: We will address verified inquiries within 15 business days.</li>
+        </ul>
+      </div>
+
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="privacy.html">隐私保护政策 (Privacy Policy)</a>
+      <span>·</span>
+      <a href="terms.html">用户服务协议 (Terms of Service)</a>
+    </div>
+    <div>&copy; 2026 Flutter Luban Team (CMXC). All rights reserved.</div>
+  </footer>
+
+  <script>
+    let currentLang = 'zh';
+
+    function toggleLanguage() {
+      const zhDiv = document.getElementById('content-zh');
+      const enDiv = document.getElementById('content-en');
+      const btn = document.getElementById('langToggle');
+
+      if (currentLang === 'zh') {
+        zhDiv.style.display = 'none';
+        enDiv.style.display = 'block';
+        btn.textContent = '切换至中文';
+        currentLang = 'en';
+        document.documentElement.lang = 'en';
+        localStorage.setItem('luban_privacy_lang', 'en');
+      } else {
+        zhDiv.style.display = 'block';
+        enDiv.style.display = 'none';
+        btn.textContent = 'Switch to English';
+        currentLang = 'zh';
+        document.documentElement.lang = 'zh-CN';
+        localStorage.setItem('luban_privacy_lang', 'zh');
+      }
+    }
+
+    // 初始化读取偏好或浏览器默认语言
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('luban_privacy_lang');
+      const browserLang = navigator.language || navigator.userLanguage;
+      if (savedLang === 'en' || (!savedLang && browserLang && !browserLang.startsWith('zh'))) {
+        toggleLanguage();
+      }
+    });
+  </script>
+
+</body>
+</html>

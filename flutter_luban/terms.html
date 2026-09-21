@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>用户服务协议与使用条款 - 鲁班图像工具箱 | Terms of Service - Flutter Luban</title>
+  <meta name="description" content="鲁班 (Flutter Luban) 高性能端侧图片压缩与编辑工具箱用户服务协议、免责声明、知识产权与使用合规守则。">
+  <style>
+    :root {
+      --bg: #F8FAFC;
+      --card-bg: #FFFFFF;
+      --text-main: #0F172A;
+      --text-sub: #475569;
+      --text-hint: #94A3B8;
+      --accent: #2563EB;
+      --accent-soft: rgba(37, 99, 235, 0.08);
+      --accent-hover: #1D4ED8;
+      --amber: #D97706;
+      --amber-soft: rgba(217, 119, 6, 0.1);
+      --border: rgba(148, 163, 184, 0.2);
+      --header-border: rgba(148, 163, 184, 0.15);
+      --code-bg: #F1F5F9;
+      --shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0B0F19;
+        --card-bg: #141B2D;
+        --text-main: #F1F5F9;
+        --text-sub: #94A3B8;
+        --text-hint: #64748B;
+        --accent: #3B82F6;
+        --accent-soft: rgba(59, 130, 246, 0.14);
+        --accent-hover: #60A5FA;
+        --amber: #F59E0B;
+        --amber-soft: rgba(245, 158, 11, 0.15);
+        --border: rgba(255, 255, 255, 0.1);
+        --header-border: rgba(255, 255, 255, 0.08);
+        --code-bg: #1E293B;
+        --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.75;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: var(--bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--header-border);
+      padding: 16px 24px;
+    }
+
+    .header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-main);
+      text-decoration: none;
+      letter-spacing: 0.3px;
+    }
+
+    .logo-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, var(--accent), var(--amber));
+      border-radius: 8px;
+      color: #FFF;
+      font-size: 16px;
+    }
+
+    .lang-btn {
+      background-color: var(--accent-soft);
+      border: 1px solid var(--border);
+      color: var(--accent);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .lang-btn:hover {
+      background-color: var(--accent);
+      color: #FFF;
+    }
+
+    main {
+      max-width: 860px;
+      margin: 32px auto 64px;
+      padding: 0 24px;
+    }
+
+    .article-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: var(--shadow);
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 24px;
+      font-size: 0.85rem;
+      color: var(--text-hint);
+      align-items: center;
+    }
+
+    .meta-tag {
+      background-color: var(--accent-soft);
+      color: var(--accent);
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 8px;
+      color: var(--text-main);
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      font-size: 1.05rem;
+      color: var(--text-sub);
+      margin-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      margin: 36px 0 14px;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      background-color: var(--amber);
+      border-radius: 2px;
+    }
+
+    p {
+      margin-bottom: 14px;
+      color: var(--text-sub);
+    }
+
+    ul, ol {
+      margin: 12px 0 18px 24px;
+      color: var(--text-sub);
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    strong {
+      color: var(--text-main);
+    }
+
+    .highlight-box {
+      background: var(--accent-soft);
+      border-left: 4px solid var(--accent);
+      padding: 18px 20px;
+      border-radius: 0 12px 12px 0;
+      margin: 24px 0;
+    }
+
+    .highlight-box p {
+      margin: 0;
+      color: var(--text-main);
+      font-weight: 500;
+    }
+
+    .tip-box {
+      background: var(--amber-soft);
+      border-left: 4px solid var(--amber);
+      padding: 16px 20px;
+      border-radius: 0 12px 12px 0;
+      margin: 20px 0;
+    }
+
+    .tip-box p {
+      margin: 0;
+      color: var(--text-main);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 22px 0;
+      font-size: 0.9rem;
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 12px 14px;
+      text-align: left;
+    }
+
+    th {
+      background-color: var(--accent-soft);
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    td {
+      color: var(--text-sub);
+    }
+
+    code {
+      background-color: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.88em;
+      font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      color: var(--accent-hover);
+    }
+
+    footer {
+      border-top: 1px solid var(--header-border);
+      padding: 32px 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-hint);
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      color: var(--text-sub);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    @media (max-width: 600px) {
+      .article-card {
+        padding: 24px 18px;
+        border-radius: 14px;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+      table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-badge">🛠️</span>
+        <span>鲁班 · 图像工具箱</span>
+      </a>
+      <button class="lang-btn" id="langToggle" onclick="toggleLanguage()">Switch to English</button>
+    </div>
+  </header>
+
+  <main>
+    <article class="article-card">
+      
+      <!-- 中文版内容 (Chinese Version) -->
+      <div id="content-zh">
+        <div class="meta">
+          <span class="meta-tag">用户服务协议</span>
+          <span>生效日期：2026 年 9 月 20 日</span>
+          <span>应用包名：<code>com.cmxc.wallpaper</code></span>
+        </div>
+
+        <h1>用户服务协议与免责条款</h1>
+        <div class="subtitle">感谢您选择使用鲁班图像工具箱。在下载、安装或使用本应用前，请您仔细阅读本协议全部条款。</div>
+
+        <div class="highlight-box">
+          <p><strong>重点提示：</strong>本协议由您与 <strong>鲁班研发团队（Flutter Luban Team / CMXC）</strong>共同缔结。一旦您下载、安装或使用本软件，即视为您已完整阅读、充分理解并自愿接受本协议及相关《隐私保护政策》的全部约束。如您不同意本协议的任何条款，请勿安装或立即卸载停止使用本软件。</p>
+        </div>
+
+        <h2>一、服务内容与定位</h2>
+        <p>“鲁班”（Flutter Luban）是一款专注于智能端侧离线图像处理与创意制作的实用效率工具箱，主要向用户提供以下核心数字化功能：</p>
+        <table>
+          <thead>
+            <tr>
+              <th>核心功能</th>
+              <th>实现机制与特点</th>
+              <th>服务范畴</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>智能 Luban 压缩</strong></td>
+              <td>结合经典 Luban 采样算子与 Flutter 端侧硬件加速，自适应有损/无损压缩。</td>
+              <td>在肉眼画质近乎无损的前提下成倍缩减文件体积。</td>
+            </tr>
+            <tr>
+              <td><strong>目标大小与自定义压缩</strong></td>
+              <td>按目标文件大小（如 100KB/500KB/1MB）二分自适应收敛逼近。</td>
+              <td>满足考公、报名、上传附件等严格文件大小限制场景。</td>
+            </tr>
+            <tr>
+              <td><strong>多图像格式转换</strong></td>
+              <td>支持 JPEG、PNG、WebP、HEIC 等行业主流格式互相快速转换与导出。</td>
+              <td>优化图片兼容性与存储空间占用。</td>
+            </tr>
+            <tr>
+              <td><strong>离线专业级图像编辑</strong></td>
+              <td>裁剪翻转、马赛克局部模糊、自由画笔涂鸦、滤镜特效调节与文字贴纸。</td>
+              <td>对个人照片进行保护性打码、尺寸剪裁或美化创作。</td>
+            </tr>
+            <tr>
+              <td><strong>前后画质直观对比</strong></td>
+              <td>原图与压缩结果分屏或滑块画质对比，呈现压缩比与节约体积。</td>
+              <td>帮助用户直观确认压缩画质满足要求后再决定保存。</td>
+            </tr>
+            <tr>
+              <td><strong>应用展图工坊 (Showcase Studio)</strong></td>
+              <td>支持主流移动设备拟真样机（Device Frame）包装、渐变背景渲染与文案排版。</td>
+              <td>一键导出适用于各大应用市场的高清应用宣传展示长图。</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>二、本地离线特性与数据安全承诺</h2>
+        <p>本应用严格落实「本地优先（Local-First）」与「沙盒安全」的技术理念：</p>
+        <ul>
+          <li><strong>零远程传输</strong>：所有图片的解码、缩放、像素压缩、调色与画笔渲染完全在您的设备本地 CPU/GPU 内存与私有沙盒存储内进行，绝不通过网络上传至任何远程服务器；</li>
+          <li><strong>用户掌控历史</strong>：应用仅在设备本地保留您的操作历史与偏好设置，您有权在「设置」中随时一键清空全部历史与临时缓存；</li>
+          <li>关于个人隐私与设备权限调用的详细规范，请参阅我们配套的<a href="privacy.html">《隐私保护政策》</a>。</li>
+        </ul>
+
+        <h2>三、用户行为守则与内容合法性保证</h2>
+        <p>用户使用本软件处理、编辑、转换或导出的任何图片、文字与素材，应保证遵守所在国家与地区的法律法规：</p>
+        <ol>
+          <li><strong>合法版权保证</strong>：您保证对使用本软件所导入、处理的图片拥有完全独立的著作权、肖像权，或已获得合法权利人的完整授权许可；</li>
+          <li><strong>合规使用禁令</strong>：严禁利用本软件制作、修改、合成、编辑或传播包含下列内容的图像或媒体：
+            <br>• 反对宪法确定的基本原则、危害国家安全、泄露国家秘密、颠覆国家政权、破坏国家统一的；
+            <br>• 含有暴力恐怖、淫秽色情、赌博传销、侮辱诽谤或侵犯他人隐私权、名誉权、肖像权的；
+            <br>• 仿冒、伪造国家机关公文、印章、证件、发票、货币等涉嫌违法犯罪的；
+            <br>• 侵犯他人知识产权、商业秘密或合法权益的；
+            <br>• 违反法律法规、公序良俗或社会公德的其他内容。
+          </li>
+          <li><strong>违规后果自负</strong>：用户因违反本条规定导致的一切法律责任、行政处罚或对第三方的民事赔偿责任，均由用户自行全额承担。</li>
+        </ol>
+
+        <h2>四、技术限制与免责声明（Disclaimers）</h2>
+        <div class="tip-box">
+          <p><strong>重要免责提示：</strong>在适用法律允许的最大范围内，开发者对以下情形不承担连带责任：</p>
+        </div>
+        <ul>
+          <li><strong>原图备份建议</strong>：图片压缩（尤其是有损压缩与目标大小限制模式）会涉及不可逆的色彩空间量化与高频细节压缩。<strong>我们强烈建议您在对重要照片执行有损压缩或覆盖操作前保留原始文件的独立安全备份</strong>。用户因自行误删、覆盖原图或设置过低质量导致的文件损害，平台概不承担赔偿责任。</li>
+          <li><strong>硬件性能与内存限制</strong>：图像算法的运行耗时与体验高度依赖于用户设备自身的芯片算力、GPU 加速支持与空闲物理运存（RAM）。在处理超大分辨率（如数千万至上亿像素原图）时，若因系统内存不足（OOM）导致闪退或耗时延长，属于硬件物理限制范畴。</li>
+          <li><strong>不可抗力与系统兼容性</strong>：因操作系统异常崩溃、设备断电、存储介质物理损坏、恶意软件感染等第三方不可抗力因素造成的本地任务中断或数据丢失，开发者不承担赔偿责任。</li>
+        </ul>
+
+        <h2>五、知识产权声明</h2>
+        <ul>
+          <li><strong>应用软件著作权</strong>：本软件的代码架构、UI 交互设计、算法集成、软件图标、商标标识及所有文档资料的知识产权均归 <strong>鲁班研发团队（Flutter Luban Team / CMXC）</strong>所有。未经书面许可，任何人不得对本软件进行反编译、逆向工程、反汇编、脱壳、篡改软件核心签名或制作衍生盗版版本。</li>
+          <li><strong>用户生成物版权</strong>：用户使用本软件处理、编辑或创作生成的最终成果图片，其全部著作权与知识产权归属于用户本人或合法权利人所有，开发者不对用户作品主张任何版权份额。</li>
+        </ul>
+
+        <h2>六、未成年人保护须知</h2>
+        <p>若您是未满 18 周岁的未成年人，应在父母或其他监护人的监护、指导下共同阅读本协议，并在征得监护人同意的前提下使用本软件。监护人应指导未成年人树立正确的网络安全意识与知识产权保护观念。</p>
+
+        <h2>七、协议的修订、变更与终止</h2>
+        <p>我们保留随业务演进、技术更迭或法律法规变动而适时修订本协议的权利。修订后的协议将在本官方站点公示。若您不同意修改后的内容，有权立即停止使用并卸载本软件；若您在协议变更后继续使用本软件，即视为您充分理解并同意遵守修改后的协议条款。</p>
+
+        <h2>八、法律适用与争议管辖</h2>
+        <p>本协议的成立、生效、履行、解释及纠纷解决，均适用中华人民共和国大陆地区法律（不含冲突法规范）。因本协议引起的或与本协议相关的任何争议，双方应首先本着诚信原则友好协商解决；协商不成的，任何一方均有权将争议提交开发者住所地有管辖权的人民法院诉讼解决。</p>
+
+        <h2>九、联系我们</h2>
+        <p>如您对本协议的条款有任何疑问、建议、意见或商业咨询，欢迎通过官方邮箱联系我们：</p>
+        <ul>
+          <li><strong>团队主体</strong>：鲁班研发团队 (Flutter Luban Team / CMXC)</li>
+          <li><strong>联系邮箱</strong>：<a href="mailto:support@cmxc.com">support@cmxc.com</a></li>
+        </ul>
+      </div>
+
+      <!-- 英文版内容 (English Version) -->
+      <div id="content-en" style="display: none;">
+        <div class="meta">
+          <span class="meta-tag">Terms of Service</span>
+          <span>Effective Date: September 20, 2026</span>
+          <span>Package Name: <code>com.cmxc.wallpaper</code></span>
+        </div>
+
+        <h1>Terms of Service & Disclaimer</h1>
+        <div class="subtitle">Terms governing your access and use of Flutter Luban Image Toolkit.</div>
+
+        <div class="highlight-box">
+          <p><strong>Notice to Users:</strong> This Agreement is entered into between you ("User") and the <strong>Flutter Luban Development Team (CMXC)</strong> ("we", "us", or "our"). By downloading, installing, or accessing Flutter Luban, you signify that you have read, understood, and agreed to be bound by these Terms and our companion <a href="privacy.html">Privacy Policy</a>. If you do not agree, discontinue use and uninstall immediately.</p>
+        </div>
+
+        <h2>1. Services & Features</h2>
+        <p>Flutter Luban provides powerful on-device image processing and visual studio capabilities:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Description & Mechanism</th>
+              <th>Application Scope</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Smart Luban Compression</strong></td>
+              <td>Multi-stage adaptive sampling and compression algorithm running on-device.</td>
+              <td>Dramatically reduces file size while preserving near-lossless visual quality.</td>
+            </tr>
+            <tr>
+              <td><strong>Target Size Compression</strong></td>
+              <td>Iterative binary search convergence targeting specific size quotas (e.g. 100KB, 500KB).</td>
+              <td>Ideal for form attachments, examination registrations, and upload limits.</td>
+            </tr>
+            <tr>
+              <td><strong>Format Transcoding</strong></td>
+              <td>High-speed conversion between JPEG, PNG, WebP, and HEIC formats.</td>
+              <td>Optimizes cross-platform compatibility and storage efficiency.</td>
+            </tr>
+            <tr>
+              <td><strong>Pro Offline Photo Editor</strong></td>
+              <td>Crop, rotate, mosaic blur, freehand brush, filter adjustments, stickers, and text.</td>
+              <td>Privacy blurring, visual annotation, and creative composition.</td>
+            </tr>
+            <tr>
+              <td><strong>Side-by-Side Quality Comparison</strong></td>
+              <td>Split view or slider comparison of original vs. compressed output with size metrics.</td>
+              <td>Verify perceptual fidelity prior to saving.</td>
+            </tr>
+            <tr>
+              <td><strong>Showcase Studio</strong></td>
+              <td>Device frame mockups with gradient backdrops and marketing typography.</td>
+              <td>Export ready-to-publish app store promotional assets.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>2. Local-First & Zero-Cloud Guarantee</h2>
+        <ul>
+          <li><strong>Offline Processing</strong>: All pixels, raster operations, and compression streams are handled solely within your local hardware RAM and private app sandbox. We transmit no images over the internet.</li>
+          <li><strong>Data Sovereignty</strong>: History records and preferences reside strictly on-device. You can clear temporary caches and history logs anytime via Settings.</li>
+          <li>For full privacy terms, please refer to our <a href="privacy.html">Privacy Policy</a>.</li>
+        </ul>
+
+        <h2>3. Acceptable Use & User Warranties</h2>
+        <p>You agree to comply with all applicable local, national, and international laws when using this application:</p>
+        <ol>
+          <li><strong>Copyright Warranty</strong>: You warrant that you own or possess valid licenses, permissions, and rights to all images imported and processed.</li>
+          <li><strong>Prohibited Conduct</strong>: You agree NOT to use this software to create, modify, or distribute:
+            <br>• Content that infringes copyrights, trademarks, privacy rights, or likeness of any third party;
+            <br>• Defamatory, fraudulent, obscene, sexually explicit, hate-inciting, or terroristic materials;
+            <br>• Counterfeited identification documents, currency, stamps, or official certifications;
+            <br>• Any content in violation of governing laws or public decency.
+          </li>
+          <li><strong>Indemnification</strong>: You assume full legal responsibility for any claims or damages arising from your misuse or unlawful manipulation of content.</li>
+        </ol>
+
+        <h2>4. Disclaimers & Technical Limitations</h2>
+        <div class="tip-box">
+          <p><strong>Important Technical Disclaimer:</strong> To the maximum extent permitted by applicable law:</p>
+        </div>
+        <ul>
+          <li><strong>Backup Recommendation</strong>: Image compression (notably lossy modes and aggressive size constraints) inherently performs irreversible quantization. <strong>We strongly urge you to maintain independent backups of critical raw photographs prior to compression.</strong> We are not liable for accidental overwrites or quality degradation resulting from user-configured parameters.</li>
+          <li><strong>Hardware Constraints</strong>: Processing throughput is conditioned by your device's CPU/GPU capabilities and free memory. Ultra-high-resolution images (e.g. 100MP+) may require extended processing time or encounter OS memory limits.</li>
+          <li><strong>Force Majeure</strong>: We are not responsible for interrupted tasks or data loss stemming from unexpected OS crashes, power loss, or storage hardware failure.</li>
+        </ul>
+
+        <h2>5. Intellectual Property Rights</h2>
+        <ul>
+          <li><strong>Software IP</strong>: All source code, algorithm implementations, UI layouts, icons, logos, and documentation are proprietary assets of the <strong>Flutter Luban Development Team (CMXC)</strong>. You may not reverse engineer, decompile, crack, or distribute pirated modifications.</li>
+          <li><strong>Your Creations</strong>: All rights, title, and ownership of the output images generated by you remain entirely with you. We assert no ownership or licensing claims over your images.</li>
+        </ul>
+
+        <h2>6. Minors</h2>
+        <p>Minors should access this application under parental or guardian supervision. Guardians are responsible for advising minors on digital security and respect for copyright laws.</p>
+
+        <h2>7. Modifications to Terms</h2>
+        <p>We reserve the right to revise these Terms of Service. Any amendments will be reflected on this page. Your continued use of the application subsequent to updates constitutes acceptance of the modified Terms.</p>
+
+        <h2>8. Governing Law & Dispute Resolution</h2>
+        <p>These terms shall be governed by and construed under the laws of the People's Republic of China, without regard to conflict of law rules. Any dispute arising from these Terms shall first be resolved through friendly consultation; failing that, either party may submit the dispute to the competent people's court in the developer's domicile.</p>
+
+        <h2>9. Contact Us</h2>
+        <p>If you have any questions or feedback regarding these terms, please contact:</p>
+        <ul>
+          <li><strong>Team</strong>: Flutter Luban Development Team (CMXC)</li>
+          <li><strong>Email</strong>: <a href="mailto:support@cmxc.com">support@cmxc.com</a></li>
+        </ul>
+      </div>
+
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="privacy.html">隐私保护政策 (Privacy Policy)</a>
+      <span>·</span>
+      <a href="terms.html">用户服务协议 (Terms of Service)</a>
+    </div>
+    <div>&copy; 2026 Flutter Luban Team (CMXC). All rights reserved.</div>
+  </footer>
+
+  <script>
+    let currentLang = 'zh';
+
+    function toggleLanguage() {
+      const zhDiv = document.getElementById('content-zh');
+      const enDiv = document.getElementById('content-en');
+      const btn = document.getElementById('langToggle');
+
+      if (currentLang === 'zh') {
+        zhDiv.style.display = 'none';
+        enDiv.style.display = 'block';
+        btn.textContent = '切换至中文';
+        currentLang = 'en';
+        document.documentElement.lang = 'en';
+        localStorage.setItem('luban_terms_lang', 'en');
+      } else {
+        zhDiv.style.display = 'block';
+        enDiv.style.display = 'none';
+        btn.textContent = 'Switch to English';
+        currentLang = 'zh';
+        document.documentElement.lang = 'zh-CN';
+        localStorage.setItem('luban_terms_lang', 'zh');
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('luban_terms_lang');
+      const browserLang = navigator.language || navigator.userLanguage;
+      if (savedLang === 'en' || (!savedLang && browserLang && !browserLang.startsWith('zh'))) {
+        toggleLanguage();
+      }
+    });
+  </script>
+
+</body>
+</html>
