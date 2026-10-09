@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>隐私保护政策 - 一计 | Privacy Policy - YiJi</title>
+  <meta name="description" content="一计 (com.cmxc.good) 心情与生命流逝记录应用隐私保护政策。我们坚持本地优先与端侧沙盒处理，绝不上传您的任何日记、心情与个人隐私数据。">
+  <style>
+    :root {
+      --bg: #F8FAFC;
+      --card-bg: #FFFFFF;
+      --text-main: #0F172A;
+      --text-sub: #475569;
+      --text-hint: #94A3B8;
+      --accent: #2D3561;
+      --accent-soft: rgba(45, 53, 97, 0.08);
+      --accent-hover: #1E2342;
+      --coral: #FF6B6B;
+      --coral-soft: rgba(255, 107, 107, 0.1);
+      --border: rgba(148, 163, 184, 0.2);
+      --header-border: rgba(148, 163, 184, 0.15);
+      --code-bg: #F1F5F9;
+      --shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0B0F19;
+        --card-bg: #141B2D;
+        --text-main: #F1F5F9;
+        --text-sub: #94A3B8;
+        --text-hint: #64748B;
+        --accent: #6C7BB8;
+        --accent-soft: rgba(108, 123, 184, 0.15);
+        --accent-hover: #8D9CD5;
+        --coral: #FF8E8E;
+        --coral-soft: rgba(255, 142, 142, 0.15);
+        --border: rgba(255, 255, 255, 0.1);
+        --header-border: rgba(255, 255, 255, 0.08);
+        --code-bg: #1E293B;
+        --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.75;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: var(--bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--header-border);
+      padding: 16px 24px;
+    }
+
+    .header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-main);
+      text-decoration: none;
+      letter-spacing: 0.3px;
+    }
+
+    .logo-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      background: linear-gradient(135deg, var(--accent), var(--coral));
+      border-radius: 9px;
+      color: #FFF;
+      font-size: 16px;
+      box-shadow: 0 2px 8px rgba(45, 53, 97, 0.25);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+    }
+
+    .nav-links a {
+      color: var(--text-sub);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--accent);
+    }
+
+    main {
+      max-width: 860px;
+      margin: 40px auto 80px;
+      padding: 0 24px;
+    }
+
+    .doc-header {
+      margin-bottom: 36px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .doc-tag {
+      display: inline-block;
+      background-color: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+      letter-spacing: 0.5px;
+    }
+
+    h1 {
+      font-size: 2.1rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+      line-height: 1.3;
+    }
+
+    .meta {
+      font-size: 0.88rem;
+      color: var(--text-hint);
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .highlight-box {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 14px 14px 0;
+      padding: 20px 24px;
+      margin: 28px 0;
+      box-shadow: var(--shadow);
+    }
+
+    .highlight-box h3 {
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .highlight-box p {
+      font-size: 0.94rem;
+      color: var(--text-sub);
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin: 40px 0 16px;
+      padding-top: 12px;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 1.1em;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 24px 0 10px;
+      color: var(--text-main);
+    }
+
+    p {
+      margin-bottom: 14px;
+      color: var(--text-sub);
+      font-size: 0.98rem;
+    }
+
+    ul, ol {
+      margin: 0 0 20px 24px;
+      color: var(--text-sub);
+    }
+
+    li {
+      margin-bottom: 8px;
+      font-size: 0.96rem;
+    }
+
+    strong {
+      color: var(--text-main);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0 28px;
+      background: var(--card-bg);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      font-size: 0.92rem;
+    }
+
+    th, td {
+      padding: 14px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      background-color: var(--accent-soft);
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .badge-ok {
+      display: inline-block;
+      background: rgba(16, 185, 129, 0.12);
+      color: #10B981;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 36px 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-hint);
+      background-color: var(--bg);
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-badge">计</span>
+        <span>一计 · 法律与合规中心</span>
+      </a>
+      <nav class="nav-links">
+        <a href="privacy.html" class="active">隐私政策</a>
+        <a href="terms.html">用户协议</a>
+        <a href="../index.html">全部应用</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="doc-header">
+      <span class="doc-tag">Privacy Policy · 个人信息保护合规</span>
+      <h1>一计 隐私保护政策</h1>
+      <div class="meta">
+        <span>应用名称：一计</span>
+        <span>应用包名：com.cmxc.good</span>
+        <span>生效日期：2026 年 10 月 9 日</span>
+        <span>版本号：v1.0.0</span>
+      </div>
+    </div>
+
+    <div class="highlight-box">
+      <h3>🔒 核心隐私承诺：端侧本地优先，绝不上传您的生活数据</h3>
+      <p>
+        「一计」是一款专注个人情绪感知、生辰与生命流逝记录的轻量心境记录应用。我们深知情绪与生日数据的极度私密性。<strong>您的所有心情记录、生辰配置、统计数据均 100% 仅保存在您手机本地沙盒中，不会上传至任何云端服务器，无需注册登录即可完整使用。</strong>
+      </p>
+    </div>
+
+    <h2>一、引言与适用范围</h2>
+    <p>
+      欢迎使用「一计」（以下简称“本应用”或“我们”，应用包名：<code>com.cmxc.good</code>）。我们严格遵守《中华人民共和国个人信息保护法》《中华人民共和国网络安全法》《中华人民共和国数据安全法》以及《常见类型移动互联网应用程序必要个人信息范围规定》等法律法规，制定本隐私保护政策。
+    </p>
+    <p>
+      本政策适用于您通过移动设备使用「一计」客户端提供的各项功能与服务。请您在使用前仔细阅读并透彻理解本政策全部内容。
+    </p>
+
+    <h2>二、我们秉持的隐私设计原则</h2>
+    <ul>
+      <li><strong>端侧本地优先 (Local-First)：</strong> 所有心情日志、打卡记录、生辰出生日期及预期寿命均保存在设备本地数据库（SQLite / SharedPreferences），不设中心化用户数据服务器。</li>
+      <li><strong>无需注册账号：</strong> 打开即用，无需提供手机号、邮箱、身份证等任何实名注册信息。</li>
+      <li><strong>权限极简化：</strong> 仅在您明确需要导出数据到本地、体验震动反馈或接收提醒时申请必要权限，绝不索取与功能无关的权限（如通讯录、短信、位置等）。</li>
+      <li><strong>拒绝违规追踪：</strong> 不接入任何广告推送联盟 SDK，不收集跨应用设备追踪标识符（如 IMEI、OAID、IDFA 等）。</li>
+    </ul>
+
+    <h2>三、我们如何收集与使用您的信息</h2>
+    <p>由于本应用采取完全本地化的运行机制，各项核心功能所需数据流向如下表所示：</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>业务功能</th>
+          <th>涉及数据类型</th>
+          <th>数据存储位置</th>
+          <th>使用目的</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>心情记录与日记</strong></td>
+          <td>心情图标、心情评分、备注文本、记录时间</td>
+          <td><span class="badge-ok">仅本机 SQLite 数据库</span></td>
+          <td>呈现历史心情列表、生成统计趋势图表。</td>
+        </tr>
+        <tr>
+          <td><strong>生辰与死之钟</strong></td>
+          <td>出生年月日、预期寿命数值</td>
+          <td><span class="badge-ok">仅本机本地偏好设置</span></td>
+          <td>实时计算精确生活年岁、一生中对应的时刻及今年过去百分比。</td>
+        </tr>
+        <tr>
+          <td><strong>数据导出与备份</strong></td>
+          <td>由您自主触发生成的 Excel 导出文件</td>
+          <td><span class="badge-ok">手机用户公开下载目录</span></td>
+          <td>便于您在电脑或其他设备离线查看与自主归档。</td>
+        </tr>
+        <tr>
+          <td><strong>应用主题与偏好</strong></td>
+          <td>深浅色模式、多语言配置、多主题选择</td>
+          <td><span class="badge-ok">仅本机本地偏好设置</span></td>
+          <td>保存界面个性化定制偏好。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>四、设备系统权限使用说明</h2>
+    <p>为了保障功能的正常运行，本应用在必要时可能会向操作系统申请以下基础权限：</p>
+    <ul>
+      <li><strong>存储/文件管理权限 (READ/WRITE_EXTERNAL_STORAGE / MANAGE_EXTERNAL_STORAGE)：</strong>
+        仅在您主动使用【数据导出为 Excel】或【从本地文件导入数据】功能时，用于读写您指定的表格文件。若您不使用导入/导出功能，完全无需开启此权限，不影响基础记录功能。
+      </li>
+      <li><strong>振动控制权限 (VIBRATE)：</strong>
+        用于在您点击心情表情、切换生辰模式或滑动菜单时，提供系统级触感震动反馈（Haptic Feedback），可在系统设置中随时关闭。
+      </li>
+      <li><strong>网络访问权限 (INTERNET)：</strong>
+        用于加载“关于我们”或更新日志中的外部网页（WebView），以及基础版本更新检测。<strong>本应用绝不会通过网络传输您的本地记录与个人数据。</strong>
+      </li>
+    </ul>
+
+    <h2>五、第三方 SDK 及服务集成说明</h2>
+    <p>
+      为了保证客户端轻量、安全与纯净，「一计」<strong>未集成任何第三方商业广告 SDK、跨应用追踪 SDK 或画像统计 SDK</strong>。应用内运行所依赖的技术框架均为开源安全基础设施（如 Flutter 运行时、本地持久化 SQLite 等），均在设备本地受限沙盒中闭环运行。
+    </p>
+
+    <h2>六、数据的存储、备份、导出与删除</h2>
+    <ul>
+      <li><strong>数据存储期限：</strong> 所有数据存储在您的本地设备上，只要您未主动卸载应用或清理应用存储，数据将永久保留在本地。</li>
+      <li><strong>自主导出：</strong> 您可以随时在【设置】->【数据管理】中将全部心情数据一键导出为标准 <code>.xlsx</code> (Excel) 文件。</li>
+      <li><strong>彻底删除：</strong> 您可以在应用设置中直接一键清空全部历史数据，或直接卸载本应用；卸载后，系统沙盒中的所有数据将自动被操作系统完全抹除，不可恢复。</li>
+    </ul>
+
+    <h2>七、未成年人信息保护</h2>
+    <p>
+      我们高度重视未成年人的个人信息与隐私安全。由于本应用不收集任何云端个人身份信息，未成年人使用本应用同样受到完全本地化的隐私保护。若您是未成年人，建议在父母或其他监护人的陪同指导下使用本应用。
+    </p>
+
+    <h2>八、本隐私政策的修订与生效</h2>
+    <p>
+      我们可能会根据法律法规的要求或应用功能的重大调整适时修改本隐私政策。任何更新均会在本页面公布，并更新文首的“生效日期”。重大变更时，我们将在应用启动界面或设置公告中向您显著提示。
+    </p>
+
+    <h2>九、联系我们</h2>
+    <p>
+      如果您对本隐私保护政策、数据处理有任何疑问、意见或申诉，欢迎通过以下方式与我们取得联系，我们将在收到后的 15 个工作日内予以核实并答复：
+    </p>
+    <ul>
+      <li><strong>开源项目主页：</strong> <a href="https://github.com/yyds-store/flutter_good" target="_blank" rel="noopener">https://github.com/yyds-store/flutter_good</a></li>
+      <li><strong>合规站点：</strong> <a href="https://yyds-html.github.io/flutter_good/">https://yyds-html.github.io/flutter_good/</a></li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>© 2026 一计 (com.cmxc.good) All rights reserved. 遵循开放透明与本地优先原则。</p>
+    <p style="margin-top: 6px;">
+      <a href="terms.html">用户服务协议</a> · 
+      <a href="privacy.html">隐私保护政策</a> · 
+      <a href="../index.html">返回 YYDS 协议中心</a>
+    </p>
+  </footer>
+
+</body>
+</html>

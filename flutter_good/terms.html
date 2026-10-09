@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>用户服务协议 - 一计 | User Agreement - YiJi</title>
+  <meta name="description" content="一计 (com.cmxc.good) 心情与生命流逝记录应用用户服务协议与法律声明。">
+  <style>
+    :root {
+      --bg: #F8FAFC;
+      --card-bg: #FFFFFF;
+      --text-main: #0F172A;
+      --text-sub: #475569;
+      --text-hint: #94A3B8;
+      --accent: #2D3561;
+      --accent-soft: rgba(45, 53, 97, 0.08);
+      --accent-hover: #1E2342;
+      --coral: #FF6B6B;
+      --coral-soft: rgba(255, 107, 107, 0.1);
+      --border: rgba(148, 163, 184, 0.2);
+      --header-border: rgba(148, 163, 184, 0.15);
+      --shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0B0F19;
+        --card-bg: #141B2D;
+        --text-main: #F1F5F9;
+        --text-sub: #94A3B8;
+        --text-hint: #64748B;
+        --accent: #6C7BB8;
+        --accent-soft: rgba(108, 123, 184, 0.15);
+        --accent-hover: #8D9CD5;
+        --coral: #FF8E8E;
+        --coral-soft: rgba(255, 142, 142, 0.15);
+        --border: rgba(255, 255, 255, 0.1);
+        --header-border: rgba(255, 255, 255, 0.08);
+        --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.75;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: var(--bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--header-border);
+      padding: 16px 24px;
+    }
+
+    .header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-main);
+      text-decoration: none;
+      letter-spacing: 0.3px;
+    }
+
+    .logo-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      background: linear-gradient(135deg, var(--accent), var(--coral));
+      border-radius: 9px;
+      color: #FFF;
+      font-size: 16px;
+      box-shadow: 0 2px 8px rgba(45, 53, 97, 0.25);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+    }
+
+    .nav-links a {
+      color: var(--text-sub);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--accent);
+    }
+
+    main {
+      max-width: 860px;
+      margin: 40px auto 80px;
+      padding: 0 24px;
+    }
+
+    .doc-header {
+      margin-bottom: 36px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .doc-tag {
+      display: inline-block;
+      background-color: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+      letter-spacing: 0.5px;
+    }
+
+    h1 {
+      font-size: 2.1rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+      line-height: 1.3;
+    }
+
+    .meta {
+      font-size: 0.88rem;
+      color: var(--text-hint);
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .highlight-box {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 14px 14px 0;
+      padding: 20px 24px;
+      margin: 28px 0;
+      box-shadow: var(--shadow);
+    }
+
+    .highlight-box h3 {
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .highlight-box p {
+      font-size: 0.94rem;
+      color: var(--text-sub);
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin: 40px 0 16px;
+      padding-top: 12px;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 1.1em;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    p {
+      margin-bottom: 14px;
+      color: var(--text-sub);
+      font-size: 0.98rem;
+    }
+
+    ul, ol {
+      margin: 0 0 20px 24px;
+      color: var(--text-sub);
+    }
+
+    li {
+      margin-bottom: 8px;
+      font-size: 0.96rem;
+    }
+
+    strong {
+      color: var(--text-main);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 36px 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-hint);
+      background-color: var(--bg);
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-badge">计</span>
+        <span>一计 · 法律与合规中心</span>
+      </a>
+      <nav class="nav-links">
+        <a href="privacy.html">隐私政策</a>
+        <a href="terms.html" class="active">用户协议</a>
+        <a href="../index.html">全部应用</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="doc-header">
+      <span class="doc-tag">Terms of Service · 法律与服务协议</span>
+      <h1>一计 用户服务协议</h1>
+      <div class="meta">
+        <span>应用名称：一计</span>
+        <span>应用包名：com.cmxc.good</span>
+        <span>生效日期：2026 年 10 月 9 日</span>
+        <span>版本号：v1.0.0</span>
+      </div>
+    </div>
+
+    <div class="highlight-box">
+      <h3>📋 重点提示</h3>
+      <p>
+        请您在下载、安装并使用「一计」移动应用程序前，务必审慎阅读并充分理解本协议各条款。当您开始使用本应用，即表示您已阅读并同意接受本协议的全部约定。
+      </p>
+    </div>
+
+    <h2>一、协议的确认与接纳</h2>
+    <p>
+      1.1 本协议由您（以下简称“用户”）与「一计」运营团队（以下简称“我们”）共同缔结，旨在明确您在使用「一计」移动端应用（包名：<code>com.cmxc.good</code>）过程中的权利与义务。
+    </p>
+    <p>
+      1.2 本协议的内容包括协议正文及我们已经发布或将来可能发布的各项规则、声明（包括但不限于《一计 隐私保护政策》）。所有规则均为本协议不可分割的组成部分，与本协议具有同等法律效力。
+    </p>
+
+    <h2>二、软件许可与使用规范</h2>
+    <p>
+      2.1 <strong>许可范围：</strong> 我们授予您一项个人的、不可转让的、非排他性的免费许可，以在您的个人智能移动设备上下载、安装并运行本软件。
+    </p>
+    <p>
+      2.2 <strong>禁止行为：</strong> 您在使用本软件时，不得实施下列行为：
+    </p>
+    <ul>
+      <li>对本软件进行反向工程、反向汇编、反向编译，或以其他方式尝试挖掘软件源代码；</li>
+      <li>对本软件运行过程中释放到设备内存中的数据进行复制、修改、挂接运行或制作任何衍生作品；</li>
+      <li>利用任何插件、外挂、第三方工具对本软件实施干扰、破坏或非法修改；</li>
+      <li>将本软件用于任何违反中华人民共和国法律法规、危害国家安全或侵犯他人合法权益的活动。</li>
+    </ul>
+
+    <h2>三、本地数据存储与用户责任</h2>
+    <p>
+      3.1 <strong>本地存储机制：</strong> 本应用秉承“本地优先”原则，您记录的心情、日志日记、生辰年月日及预期寿命数值等数据均存储于您当前设备的受保护沙盒中，不设云端自动同步服务。
+    </p>
+    <p>
+      3.2 <strong>数据自主备份责任：</strong> 鉴于数据纯本地保存的特性，若您发生<strong>更换手机、主动清除应用数据、刷机恢复出厂设置或卸载应用</strong>等操作，本地存储的数据可能会丢失。<strong>请您务必定期利用应用内置的【Excel 导出备份】功能将数据导出至安全位置妥善保存。对于因用户未及时备份而造成的数据遗失，我们不承担恢复责任。</strong>
+    </p>
+
+    <h2>四、知识产权声明</h2>
+    <p>
+      4.1 「一计」的全部软件架构、源代码、界面交互设计、图标设计、图形元素、文字表述均受著作权法、商标法及其他知识产权法律法规的保护。
+    </p>
+    <p>
+      4.2 未经我们事先书面许可，任何人不得以任何商业目的擅自使用、复制、修改、传播上述任何知识产权内容。
+    </p>
+
+    <h2>五、健康提示与免责声明</h2>
+    <p>
+      5.1 <strong>生活辅助性质说明：</strong> 「一计」所提供的“心情记录”、“生辰倒计时”、“生命时钟”等功能仅用于帮助用户进行个人生活反思、时光珍惜与情绪自我觉察，<strong>不构成任何形式的医学诊断、心理治疗建议或医疗行为</strong>。若您面临严重的心理困扰或情绪障碍，建议寻求专业医疗机构或心理咨询师的帮助。
+    </p>
+    <p>
+      5.2 <strong>有限保证：</strong> 本软件按“现状”（AS IS）提供。在适用法律允许的最大范围内，我们不对软件的绝对无故障、持续可用性提供明示或暗示的担保，但我们将竭力维护软件的稳定与更新迭代。
+    </p>
+
+    <h2>六、协议的变更与终止</h2>
+    <p>
+      6.1 我们有权根据产品迭代或政策法规适时修订本协议。修订后的协议一旦公布即代替原协议生效。如您在协议修订后继续使用本软件，即视为您已接受修改后的协议。
+    </p>
+    <p>
+      6.2 若您不同意修改后的条款，您有权随时停止使用并卸载本应用。
+    </p>
+
+    <h2>七、法律适用与管辖</h2>
+    <p>
+      7.1 本协议的成立、生效、履行、解释及争议的解决均应适用中华人民共和国法律。
+    </p>
+    <p>
+      7.2 如双方就本协议内容或其执行发生任何争议，双方应友好协商解决；协商不成的，任何一方均可向运营方所在地有管辖权的人民法院提起诉讼。
+    </p>
+
+    <h2>八、联系方式</h2>
+    <p>
+      如您对本协议有任何疑问或需要帮助，欢迎访问我们的官方主页或提交 Issue：
+    </p>
+    <ul>
+      <li><strong>项目主页：</strong> <a href="https://github.com/yyds-store/flutter_good" target="_blank" rel="noopener">https://github.com/yyds-store/flutter_good</a></li>
+      <li><strong>合规站点：</strong> <a href="https://yyds-html.github.io/flutter_good/">https://yyds-html.github.io/flutter_good/</a></li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>© 2026 一计 (com.cmxc.good) All rights reserved. 遵循开放透明与本地优先原则。</p>
+    <p style="margin-top: 6px;">
+      <a href="terms.html">用户服务协议</a> · 
+      <a href="privacy.html">隐私保护政策</a> · 
+      <a href="../index.html">返回 YYDS 协议中心</a>
+    </p>
+  </footer>
+
+</body>
+</html>
